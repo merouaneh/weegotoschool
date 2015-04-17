@@ -25,15 +25,12 @@ function Location(stringAddress) {
   this.stringAddress = stringAddress;
   this.lat = 0;
   this.lng = 0;
+  this.streetNumber = '';
+  this.locality = '';
+  this.postalCode = '';
   return this;
 };
 
-function Location2(stringAddress) {
-  this.stringAddress = stringAddress;
-  this.lat = 0;
-  this.lng = 0;
-  return this;
-};
 
 /**
   *  draws route on a map 
@@ -121,36 +118,35 @@ Route.prototype.getPoints = function() {
   return points;
 };
 
-Location2.prototype.getLatLong = function() {
-  var geocode = geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address':this.stringAddress}, function(results, status){
 
-  if (status == google.maps.GeocoderStatus.OK) {
-    lat = results[0].geometry.location.lat();
-    lng = results[0].geometry.location.lng();
-   // color = '#'+Math.floor(Math.random()*16777215).toString(16);
-    color = randomColor( {luminosity: 'dark',  hue: 'red'});
-   // alert(color);
-    new Route([ [48.95708459999999,2.5611887000000024], [lat, lng], [lat-1, lng]], color);
-  } else {
-    alert("No results found for address: " + this.stringAddress);
-  }
-});
 
-};
-
-Location.prototype.getLatLong = function() {
+Location.prototype.getCoordinates = function() {
   var geocode = geocoder = new google.maps.Geocoder();
   geocoder.geocode({ 'address':this.stringAddress}, function(results, status){
   if (status == google.maps.GeocoderStatus.OK) {
-    lat = results[0].geometry.location.lat();
-    lng = results[0].geometry.location.lng();
+    result = results[0];
+    loc = result.geometry.location;
+    lat = loc.lat();
+    lng = loc.lng();
+    
+    addressComponents = result.address_components;
+    for( i = 0; i < addressComponents.length ; i ++){
+      addressComponent = addressComponents[i];
+      addressComponentType = addressComponent.types[0];
+      switch( addressComponentType)  {
+        case "street_number": this.streetNumber = addressComponent.long_name; break;
+        case "locality": this.locality = addressComponent.long_name; break;
+        case "postal_code": this.postalCode = addressComponent.long_name; break;
+        case "route": this.route = addressComponent.long_name; break;
+        default: break;
+      }
+    }
     weegotoschool.locations.push(new Array(lat,lng));
     if( weegotoschool.locations.length == 2 ) {
-       myOrigin = weegotoschool.locations[0];
        school = weegotoschool.locations[0];
-       r = new Route([ school, myOrigin, [lat-1, lng]], randomColor()).drawRoute(weegotoschool.maps.map1);
-       weegotoschool.routes.push(r);
+       home = weegotoschool.locations[1];
+       route = new Route([ home, school], color()).drawRoute(weegotoschool.maps.map1);
+       weegotoschool.routes.push(route);
 
     }
   } else {
@@ -160,48 +156,48 @@ Location.prototype.getLatLong = function() {
 
 };
 
+function color () {
+  return randomColor({ luminosity: 'bright', hue: 'blue'}); 
+}
+
+
 function handleChange(element) {
   index = element.value;
   route = weegotoschool.routes[index];
-  if(element.checked){
+  console.log('Handling checked:' +element.checked+' for index' +index+ ' route is : ' + route); 
+
+  if( route == null ) {
     school = weegotoschool.locations[0];
-    myOrigin = weegotoschool.locations[index];
-    new Route([ school, myOrigin, [lat-1, lng]], randomColor()).drawRoute(weegotoschool.maps.map1);
-   // alert(myLocation);
-  } else {
-       alert('removing' + route);
-       route.drawRoute(null);
-
-    //route.drawRoute(null);
+    home = weegotoschool.locations[index];
+    route = new Route([ home, school, ], color());
+    weegotoschool.routes[index]=route;
+    
   }
-
-
-value = document.getElementById(element)
+  if(element.checked == true ){ 
+      console.log('enabling route display for route '+route.origin+','+route.destination);
+      route.drawRoute(weegotoschool.maps.map1);
+    }
+  else{
+    console.log('Disabling route display for route '+route.origin+','+route.destination);
+    route.drawRoute(null);
+  }
 }
 
 
 function initialize() {
-  //  alert("bbbgetLatLong: " + getLatLong('avenue louis breguet, villepinte'));
+  //  alert("bbbgetCoordinates: " + getCoordinates('avenue louis breguet, villepinte'));
 
   var weegotoschoolOptions = { zoom: 3, center: new google.maps.LatLng(48.95708459999999,2.5611887000000024), mapTypeId: google.maps.MapTypeId.DRIVING };
   weegotoschool.maps.map1 = new google.maps.Map(document.getElementById('map_canvas'), weegotoschoolOptions);
 
-  var loc = new Location('avenue louis breguet, villepinte'); loc.getLatLong();
-  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
-  loc = new Location('avenue maurice utrillo, argenteuil'); loc.getLatLong();
-  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
-  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
-  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
-  loc.getLatLong();
-
-  //new Location2('avenue maurice utrillo, montmagny').getLatLong();
-  //new Location('Paris').getLatLong();
-  //new Location('mitry-mory').getLatLong();
-  //new Location2('tremblay').getLatLong();
-  //new Location('mitry-mory').getLatLong();
-
-  weegotoschool.routes[0]=new Route();
-
+  var loc = new Location('avenue louis breguet, villepinte'); loc.getCoordinates();
+  loc = new Location('avenue maurice utrillo, montmagny'); loc.getCoordinates();
+  loc = new Location('avenue maurice utrillo, argenteuil'); loc.getCoordinates();
+  loc = new Location('saint-denis'); loc.getCoordinates();
+  loc = new Location('gagny'); loc.getCoordinates();
+  loc = new Location('neuilly'); loc.getCoordinates();
+  loc = new Location('pantin'); loc.getCoordinates();
+  loc = new Location('villeneuve la garenne'); loc.getCoordinates();
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

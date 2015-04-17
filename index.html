@@ -1,12 +1,24 @@
-    <html>
-    <head></head>
+<html>
+    <head>
+        <title>WeeGoToSchool</title>
+    </head>
     <body>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="color.js"></script>
     <script type="text/javascript" src="gmap.js"></script>
+    <link rel="stylesheet" type="text/css" href="weegotoschool.css">
 
-    <h1>Itiniraires des parents</h1>
-    <div id="map_canvas" style="height:768px;width:1024px;"></div>
-    
-    <div id="map_canvas2"></div>
-</body>
+    <h1>WeeGo</h1>
+      <div id="map_canvas" style="height:768px;width:1024px; float: left;"></div>
+      <div style=" overflow: hidden;">
+        <div><label><input type="checkbox"  onClick="handleChange(this);" value="0" checked="true" />Route 1</label></div>
+        <div><label><input type="checkbox"  onClick="handleChange(this);" value="1"/>Route 2</label></div>
+        <div><label><input type="checkbox"  onClick="handleChange(this);" value="2"/>Route 3</label></div>
+        <div><label><input type="checkbox"  onClick="handleChange(this);" value="3"/>Route 4</label></div>
+        <div><label><input type="checkbox"  onClick="handleChange(this);" value="4"/>Route 5</label></div>
+        <div><label><input type="checkbox"  onClick="handleChange(this);" value="5"/>Route 6</label></div>
+      </div>
+    </body>
+
+</html>
+

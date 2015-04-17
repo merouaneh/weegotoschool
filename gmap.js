@@ -1,6 +1,6 @@
 
 
-var weegotoschool={ directions:new google.maps.DirectionsService(), maps:{}, routes:{}};
+var weegotoschool={ directions:new google.maps.DirectionsService(), maps:{}, routes:[], locations: []};
       
 /**
  * base-class     
@@ -28,6 +28,13 @@ function Location(stringAddress) {
   return this;
 };
 
+function Location2(stringAddress) {
+  this.stringAddress = stringAddress;
+  this.lat = 0;
+  this.lng = 0;
+  return this;
+};
+
 /**
   *  draws route on a map 
   *              
@@ -36,13 +43,18 @@ function Location(stringAddress) {
   **/                    
 Route.prototype.drawRoute = function(map) {
   var _this=this;
+  directionDisplay = _this.directionsRenderer
+  if( map == null &&  directionDisplay != null) {
+    directionDisplay.setMap(null);
+  }
   weegotoschool.directions.route( { 'origin': this.origin, 'destination': this.destination, 'waypoints': this.waypoints, 
                                   'travelMode': google.maps.DirectionsTravelMode.DRIVING },
     function(res,sts) {
         if(sts==google.maps.DirectionsStatus.OK) {
         if(!_this.directionsRenderer) {
         //  { polylineOptions: { strokeWeight: 4, strokeOpacity: 1, strokeColor:  'red' }
-          _this.directionsRenderer = new google.maps.DirectionsRenderer({ polylineOptions: { strokeWeight: 6, strokeOpacity: 0.6, strokeColor: _this.strokeColor},  'draggable':true }); 
+          _this.directionsRenderer = new google.maps.DirectionsRenderer({ polylineOptions: { strokeWeight: 6, strokeOpacity: 0.6, strokeColor: _this.strokeColor}, 
+                                                                                             'draggable':true }); 
                         }
           _this.directionsRenderer.setMap(map);
           _this.directionsRenderer.setDirections(res);
@@ -67,39 +79,31 @@ Route.prototype.setGMap = function(map){
   * @param points optional array array of lat+lng-values defining a route
   * @return object Route        
   **/
-Route.prototype.setPoints = function(points)
-{
+Route.prototype.setPoints = function(points) {
   this.origin = null;
   this.destination = null;
   this.waypoints = [];
-  if(points)
-  {
+  if(points) {
     for(var p=0;p<points.length;++p)
     {
       this.waypoints.push({location:new google.maps.LatLng(points[p][0], points[p][1]), stopover:false});
     }
     this.origin=this.waypoints.shift().location;
     this.destination=this.waypoints.pop().location;
-  }
-  else
-  {
-    var route=this.directionsRenderer.getDirections().routes[0];
-    
-    for(var l=0;l<route.legs.length;++l)
-    {
+  } else {
+    var route=this.directionsRenderer.getDirections().routes[0];        
+    for(var l=0;l<route.legs.length;++l) {
       if(!this.origin)this.origin=route.legs[l].start_location;
       this.destination = route.legs[l].end_location;
       
       for(var w=0;w<route.legs[l].via_waypoints.length;++w)
       {
-        this.waypoints.push({location:route.legs[l].via_waypoints[w],
-                             stopover:false});
+        this.waypoints.push({location:route.legs[l].via_waypoints[w], stopover:false});
       }
     }
     //the route has been modified by the user when you're here
     //you may call now this.getPoints() and work with the result
   }
-
   return this;
 };
 
@@ -117,7 +121,7 @@ Route.prototype.getPoints = function() {
   return points;
 };
 
-Location.prototype.getLatLong = function() {
+Location2.prototype.getLatLong = function() {
   var geocode = geocoder = new google.maps.Geocoder();
   geocoder.geocode({ 'address':this.stringAddress}, function(results, status){
 
@@ -127,7 +131,7 @@ Location.prototype.getLatLong = function() {
    // color = '#'+Math.floor(Math.random()*16777215).toString(16);
     color = randomColor( {luminosity: 'dark',  hue: 'red'});
    // alert(color);
-    new Route([ [48.95708459999999,2.5611887000000024], [lat, lng], ], color).drawRoute(weegotoschool.maps.map1);
+    new Route([ [48.95708459999999,2.5611887000000024], [lat, lng], [lat-1, lng]], color);
   } else {
     alert("No results found for address: " + this.stringAddress);
   }
@@ -135,30 +139,73 @@ Location.prototype.getLatLong = function() {
 
 };
 
+Location.prototype.getLatLong = function() {
+  var geocode = geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ 'address':this.stringAddress}, function(results, status){
+  if (status == google.maps.GeocoderStatus.OK) {
+    lat = results[0].geometry.location.lat();
+    lng = results[0].geometry.location.lng();
+    weegotoschool.locations.push(new Array(lat,lng));
+    if( weegotoschool.locations.length == 2 ) {
+       myOrigin = weegotoschool.locations[0];
+       school = weegotoschool.locations[0];
+       r = new Route([ school, myOrigin, [lat-1, lng]], randomColor()).drawRoute(weegotoschool.maps.map1);
+       weegotoschool.routes.push(r);
+
+    }
+  } else {
+    alert("No results found for address: " + this.stringAddress);
+  }
+});
+
+};
+
+function handleChange(element) {
+  index = element.value;
+  route = weegotoschool.routes[index];
+  if(element.checked){
+    school = weegotoschool.locations[0];
+    myOrigin = weegotoschool.locations[index];
+    new Route([ school, myOrigin, [lat-1, lng]], randomColor()).drawRoute(weegotoschool.maps.map1);
+   // alert(myLocation);
+  } else {
+       alert('removing' + route);
+       route.drawRoute(null);
+
+    //route.drawRoute(null);
+  }
+
+
+value = document.getElementById(element)
+}
+
 
 function initialize() {
-//  alert("bbbgetLatLong: " + getLatLong('avenue louis breguet, villepinte'));
+  //  alert("bbbgetLatLong: " + getLatLong('avenue louis breguet, villepinte'));
 
- var weegotoschoolOptions = { zoom: 3, center: new google.maps.LatLng(48.95708459999999,2.5611887000000024), mapTypeId: google.maps.MapTypeId.DRIVING };
- weegotoschool.maps.map1 = new google.maps.Map(document.getElementById('map_canvas'), weegotoschoolOptions);
+  var weegotoschoolOptions = { zoom: 3, center: new google.maps.LatLng(48.95708459999999,2.5611887000000024), mapTypeId: google.maps.MapTypeId.DRIVING };
+  weegotoschool.maps.map1 = new google.maps.Map(document.getElementById('map_canvas'), weegotoschoolOptions);
 
-  
-new Location('avenue maurice utrillo, montmagny').getLatLong();
-new Location('rue francois mitterand, pierrefitte').getLatLong();
-new Location('Paris').getLatLong();
-new Location('mitry-mory').getLatLong();
-new Location('tremblay').getLatLong();
-weegotoschool.routes.rx=new Route();
+  var loc = new Location('avenue louis breguet, villepinte'); loc.getLatLong();
+  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
+  loc = new Location('avenue maurice utrillo, argenteuil'); loc.getLatLong();
+  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
+  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
+  loc = new Location('avenue maurice utrillo, montmagny'); loc.getLatLong();
+  loc.getLatLong();
+
+  //new Location2('avenue maurice utrillo, montmagny').getLatLong();
+  //new Location('Paris').getLatLong();
+  //new Location('mitry-mory').getLatLong();
+  //new Location2('tremblay').getLatLong();
+  //new Location('mitry-mory').getLatLong();
+
+  weegotoschool.routes[0]=new Route();
 
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-function fx(route)
-{
-  var points=weegotoschool.routes[route].getPoints();
-  //alert('copying route '+route+'\n__________\n'+points.join('\n'));
-  weegotoschool.routes.rx.setPoints(points).drawRoute(weegotoschool.maps.map2);
-}
+
 
 
 

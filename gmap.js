@@ -135,7 +135,7 @@ Location.prototype.getCoordinates = function() {
       addressComponentType = addressComponent.types[0];
       switch( addressComponentType)  {
         case "street_number": this.streetNumber = addressComponent.long_name; break;
-        case "locality": this.locality = addressComponent.long_name; break;
+        case "locality": this.locality = addressComponent.long_name; addToSelect(document.getElementById('city'), this.locality ); break;
         case "postal_code": this.postalCode = addressComponent.long_name; break;
         case "route": this.route = addressComponent.long_name; break;
         default: break;
@@ -158,7 +158,7 @@ Location.prototype.getCoordinates = function() {
 
 function color () {
   return randomColor({ luminosity: 'bright', hue: 'blue'}); 
-}
+};
 
 
 function handleChange(element) {
@@ -181,7 +181,27 @@ function handleChange(element) {
     console.log('Disabling route display for route '+route.origin+','+route.destination);
     route.drawRoute(null);
   }
-}
+};
+
+
+
+function handleCityChange(element) {
+  city = element.value;
+  var checkboxes = document.getElementsByName('route');
+  for (var i=0, n=checkboxes.length;i<n;i++) {
+     if (checkboxes[i].getAttribute('city') == city) {
+       if( checkboxes[i].checked != true ) {
+          checkboxes[i].checked = true;
+          handleChange(checkboxes[i]);
+        }
+      } else {
+          if( checkboxes[i].checked == true ) {
+          checkboxes[i].checked = false;
+          handleChange(checkboxes[i]);
+        }
+      }
+     }
+};
 
 
 function initialize() {
@@ -192,13 +212,23 @@ function initialize() {
 
   var loc = new Location('avenue louis breguet, villepinte'); loc.getCoordinates();
   loc = new Location('avenue maurice utrillo, montmagny'); loc.getCoordinates();
-  loc = new Location('avenue maurice utrillo, argenteuil'); loc.getCoordinates();
+  loc = new Location('La Courneuve'); loc.getCoordinates();
   loc = new Location('saint-denis'); loc.getCoordinates();
-  loc = new Location('gagny'); loc.getCoordinates();
+  loc = new Location('gagny'); loc.getCoordinates(); 
   loc = new Location('neuilly'); loc.getCoordinates();
   loc = new Location('pantin'); loc.getCoordinates();
   loc = new Location('villeneuve la garenne'); loc.getCoordinates();
 }
+
+
+function addToSelect(select, value) {
+    var child = document.createElement("option");
+    child.textContent = value;
+    child.value = value;
+    select.appendChild(child);
+}
+
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 

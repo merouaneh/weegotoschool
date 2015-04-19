@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>WeeGoToSchool</title>
@@ -11,15 +12,16 @@
     <h1>WeeGo</h1>
       <div id="map_canvas" style="height:768px;width:1024px; float: left;"></div>
       <div style=" overflow: hidden;">
+        <div><label><select id="city" onChange="handleCityChange(this);" />City</label></div>
         <div>
             <label><input type="checkbox"  onClick="handleChange(this);" value="0" checked="true" disabled="true" onLoad="handleChange(this);"/>Esra</label>
         </div>
-        <div><label><input type="checkbox"  onClick="handleChange(this);" value="1"/>Aisse</label></div>
-        <div><label><input type="checkbox"  onClick="handleChange(this);" value="2"/>Issa</label></div>
-        <div><label><input type="checkbox"  onClick="handleChange(this);" value="3"/>Amine</label></div>
-        <div><label><input type="checkbox"  onClick="handleChange(this);" value="4"/>Lina</label></div>
-        <div><label><input type="checkbox"  onClick="handleChange(this);" value="5"/>Muhammad</label></div>
-        <div><label><input type="checkbox"  onClick="handleChange(this);" value="6"/>Muhammad</label></div>
+        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="1" city="Montmagny"/>Aisse Coulibali</label></div>
+        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="2" city="La Courneuve"/>Issa Kamara</label></div>
+        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="3" city="Saint-Denis"/>Amine</label></div>
+        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="4" city="Saint-Denis"/>Lina</label></div>
+        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="5" city="Villepinte"/>Muhammad</label></div>
+        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="6" city="Montmagny"/>Muhammad</label></div>
 
       </div>
     </body>

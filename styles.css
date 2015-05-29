@@ -2,33 +2,40 @@
  *
  */
 
+
+/* debug
+div {
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+*/
+
 body {
   background-image: url('cars-purple-bg.png');
   background-repeat: repeat;
   background-position: left top;
-
+  font-family: Verdana;
+  font-size: 0.75em;
 }
-
 
 div#container {
    width: 820px;
-  // box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   box-shadow: 0 10px 10px rgba(0,0,0,0.3);
    margin-left: auto;
    margin-right: auto;
    background: white;
-
-
 }
 
 div#map {
    height:100%;
+   background-image: url(static_map.png);
+   background-size: 600px 600px;
 }
 
 h1 {
-  font-family: "Play";
   color: rgb(27,165,145);
-  font-style: normal;
-  background: white;
+  margin: 5px 5px 5px 5px;
 }
 
 .column {
@@ -43,19 +50,19 @@ div#content{
   display: inline;
   background-color: white;
   height: 600px;
-  padding: 5px 15px 5px 15px; 
+  padding: 5px 0px 5px 0px; 
 
 }
 
 div#left {
   width: 600px;
-  background-color: white;
   vertical-align: top;
 }
 
 div#right {
-  //width: 180px;
   background-color: white;
+  width: 200px;
+  table-layout: auto;
 }
 
 div#header {
@@ -63,27 +70,25 @@ div#header {
   padding-bottom: 10px;
 }
 
-div#banner {
+div#banner, div#footer {
   background-image: url(theme_header_cars2.png);
-  background-repeat: no-repeat;
   text-align: center;
-  height:150px;
   margin-left: auto;
   display: block;
+
+  background-repeat: repeat;
+  text-align: center;
+  height:100px;
+  background-size: 820px 100px;
+  display: block;
+
 }
 
 div#intro, div#title {
-  padding: 5px 15px 5px 15px; 
+  padding: 5px 10px 5px 10px; 
 }
 
 
-div#footer {
-  background-color: white;
-  background-image: url(theme_header_cars2.png);
-  background-repeat: no-repeat;
-  text-align: center;
-  height:170px;
-  display: block;
-}
+
 
 

@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>WeeGoToSchool</title>
+        <title>myapp</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
 
@@ -17,7 +17,7 @@
           <div id="intro">
             السلام عليكم 
             <br/>
-            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le covoiturage, la garde, la cantine et les devoirs de vos enfants.
+            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
           </div>
         </div>
        
@@ -26,130 +26,133 @@
           <div id="map"></div>
         </div>
         <div id="right" class="column">
-
-         
-        
-      <div name="addresses" class="mytable">
-         <div class="column1"></div>
-         <div class="column2"></div>
-            <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                <input  name="route" type="checkbox" checked="true" disabled="true" 
-                        value="0" 
-                        address="113 avenue Louis Breguet, Villepinte" 
-                        label="&lt;b&gt;Ecole&lt;/b&gt;"/>
-                Ecole
-              </label></div>
+          <div name="addresses" class="mytable">
+            <div class="column1"></div>
+            <div class="column2"></div>
+            <div class="column3"></div>
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input name="route" type="checkbox" checked="true" disabled="true" 
+                       value="0" id="roiute_0"
+                       address="113 avenue Louis Breguet, Villepinte" 
+                       label="&lt;b&gt;Ecole&lt;/b&gt;"/>
+              </div>
+              <div class="mycell">
+                <label for="route_0">Ecole</label>
+              </div>
             </div>
-            <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                    <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                            value="1"
-                            address="5 avenue Maurice Utrillo, Montmagny" 
-                            label="&lt;b&gt;Oum Esra&lt;/b&gt;"
-                            content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                    Oum Esra
-                </label></div>
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                      value="1" id="route_1"
+                      address="5 avenue Maurice Utrillo, Montmagny" 
+                      label="&lt;b&gt;Oum Esra&lt;/b&gt;"
+                      content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
+              </div>
+              <div class="mycell" name="addressLabel">
+                <label for="route_1">Oum Esra</label>
+              </div>
             </div>
-            <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="2"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="2" id="route_2"
                           address="5 avenue Maurice Utrillo, Argenteuil" 
                           label="&lt;b&gt;Oum Aisse&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Oum Aisse
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_1">Oum Esra</label></div>
             </div>
-            <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="3"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="3" id="route_3"
                           address="5 avenue Maurice Utrillo, Villepinte" 
                           label="&lt;b&gt;Oum Hajer&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Oum Hajer
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-            <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="4"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="4" id="route_4"
                           address="5 avenue Maurice Utrillo, Villetaneuse" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="5"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="5" id="route_5"
                           address="5 avenue Maurice Utrillo, Villetaneuse" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="6"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="6" id="route_6"
                           address="5 avenue Maurice Utrillo, Villetaneuse" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="7"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="7" id="route_7"
                           address="5 avenue Maurice Utrillo, Villetaneuse" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="8"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="8" id="route_8"
                           address="5 avenue Maurice Utrillo, Montreuil" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="9"
+             
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="9" id="route_9"
                           address="5 avenue Maurice Utrillo, Paris" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="10"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="10" id="route_10"
                           address="5 avenue Maurice Utrillo, Chantilly" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
-             <div class="myrow"><div class="mycell" name="address" >
-              <label>
-                  <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="11"
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                          value="11" id="route_11"
                           address="5 avenue Maurice Utrillo, Epinay" 
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-                  Abou Amel
-              </label></div>
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
             </div>
           </div>
         </div>

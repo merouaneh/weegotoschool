@@ -27,8 +27,6 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
   div.innerHTML = letter;
   element.parentNode.parentNode.parentNode.insertBefore(div, element.parentNode.parentNode);
 
-
-
   //var label = document.createElement('label');
   //label.for = element.parentNode.id;
  // label.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML;

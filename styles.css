@@ -4,7 +4,8 @@
 
 
 /* debug
-div {
+
+$div {
   border: 1px;
   border-style: solid;
   border-color: black;
@@ -43,6 +44,27 @@ h1 {
   text-align: left;
   height: 600px;
 
+}
+
+
+.mytable {
+  display: table;
+}
+.myrow {
+  display: table-row;
+}
+.mycell {
+  display: table-cell;
+  color: black;
+  height: 20px;
+  max-height: 20px;
+}
+.column1 {
+  display: table-column;
+  //background-color: green;
+}
+.column2 {
+  display: table-column;
 }
 
 div#content{

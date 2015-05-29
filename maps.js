@@ -66,10 +66,15 @@ AddressComponent.prototype.extractAddressComponent = function(result) {
 function createMarker(address, label, lat, lng) {
   var contentString = label;
   var latLng = new google.maps.LatLng(lat,lng);
-  var letter = String.fromCharCode("A".charCodeAt(0) + locations.length);
-  var icon_prefix = 'http://maps.gstatic.com/mapfiles/markers2/marker_green';
-  icon_prefix = 'marker_green';
-  var marker = new google.maps.Marker({ map: map, position: latLng, icon: icon_prefix + letter + '.png', animation: google.maps.Animation.DROP });
+  var letter = String.fromCharCode("A".charCodeAt(0) + locations.length - 1);
+  var icon_prefix = 'http://www.google.com/mapfiles/marker_green';
+  if( locations.length == 0) {
+    letter = '';  
+    icon_prefix = 'http://www.google.com/mapfiles/arrow';
+
+  }
+  //icon_prefix = 'marker_green';
+  var marker = new google.maps.Marker({ map: map, position: latLng, icon: icon_prefix + letter + '.png', animation: google.maps.Animation.NONE });
 
   locations.push({ label: label, address: address, latLng: latLng });
   google.maps.event.addListener(marker, 'click', function() {

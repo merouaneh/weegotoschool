@@ -10,15 +10,29 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
   myLabel = label + '<br/>' + address + (content != null ? '<br/>' + content : '');
   data.push({ label: myLabel , address: address });
 
-  var letter = String.fromCharCode("A".charCodeAt(0) + i);
+  var letter = String.fromCharCode("A".charCodeAt(0) + i - 1);
   var img = document.createElement('img');
-  img.src = 'http://maps.gstatic.com/mapfiles/markers2/marker_green' + letter + '.png';
+  var color = '_green';
+  if( letter.charCodeAt(0) > "Z".charCodeAt(0) ) {
+    color = '';
+  }
+
+ // img.src = 'http://maps.gstatic.com/mapfiles/markers2/circle' + letter + '.png';
+  if(i == 0) {
+    img.src = 'http://www.google.com/mapfiles/arrow.png'
+  }
   //element.parentNode.insertBefore(img, element);
-  
+  var div = document.createElement('div');
+  div.className = 'mycell';
+  div.innerHTML = letter;
+  element.parentNode.parentNode.parentNode.insertBefore(div, element.parentNode.parentNode);
+
+
+
   //var label = document.createElement('label');
   //label.for = element.parentNode.id;
  // label.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML;
-  element.parentNode.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML
+  //element.parentNode.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML
   //element.parentNode.insertBefore(label, element);
 
 }

@@ -1,0 +1,89 @@
+/**
+ *
+ */
+
+body {
+  background-image: url('cars-purple-bg.png');
+  background-repeat: repeat;
+  background-position: left top;
+
+}
+
+
+div#container {
+   width: 820px;
+  // box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   margin-left: auto;
+   margin-right: auto;
+   background: white;
+
+
+}
+
+div#map {
+   height:100%;
+}
+
+h1 {
+  font-family: "Play";
+  color: rgb(27,165,145);
+  font-style: normal;
+  background: white;
+}
+
+.column {
+  display: inline-block;
+  text-align: left;
+  height: 600px;
+
+}
+
+div#content{
+  text-align: center;
+  display: inline;
+  background-color: white;
+  height: 600px;
+  padding: 5px 15px 5px 15px; 
+
+}
+
+div#left {
+  width: 600px;
+  background-color: white;
+  vertical-align: top;
+}
+
+div#right {
+  //width: 180px;
+  background-color: white;
+}
+
+div#header {
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+div#banner {
+  background-image: url(theme_header_cars2.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  height:150px;
+  margin-left: auto;
+  display: block;
+}
+
+div#intro, div#title {
+  padding: 5px 15px 5px 15px; 
+}
+
+
+div#footer {
+  background-color: white;
+  background-image: url(theme_header_cars2.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  height:170px;
+  display: block;
+}
+
+

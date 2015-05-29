@@ -1,30 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>WeeGoToSchool</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+    <script type="text/javascript" src="events.js"></script>
+
     <body>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="color.js"></script>
-    <script type="text/javascript" src="gmap.js"></script>
-    <link rel="stylesheet" type="text/css" href="weegotoschool.css">
-
-    <h1>WeeGo</h1>
-      <div id="map_canvas" style="height:768px;width:1024px; float: left;"></div>
-      <div style=" overflow: hidden;">
-        <div><label><select id="city" onChange="handleCityChange(this);" />City</label></div>
-        <div>
-            <label><input type="checkbox"  onClick="handleChange(this);" value="0" checked="true" disabled="true" onLoad="handleChange(this);"/>Esra</label>
+      <div id="container">
+        <div id="header">
+          <div id="banner"></div>
+          <div id="title"><h1>Entraide Ecole</h1></div>
+          <div id="intro">
+            السلام عليكم 
+            <br/>
+            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le covoiturage, la garde, la cantine et les devoirs de vos enfants.
+          </div>
         </div>
-        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="1" city="Montmagny"/>Aisse Coulibali</label></div>
-        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="2" city="La Courneuve"/>Issa Kamara</label></div>
-        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="3" city="Saint-Denis"/>Amine</label></div>
-        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="4" city="Saint-Denis"/>Lina</label></div>
-        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="5" city="Villepinte"/>Muhammad</label></div>
-        <div><label><input name="route" type="checkbox"  onClick="handleChange(this);" value="6" city="Montmagny"/>Muhammad</label></div>
-
+       
+       <div id="content" class="container">
+        <div id="left" class="column">
+          <div id="map"></div>
+        </div>
+        <div id="right" class="column">
+          <div name="addresses">
+            <label>
+                <input  name="route" type="checkbox" checked="true" disabled="true"
+                        value="0"
+                        address="113 avenue Louis Breguet, Villepinte"
+                        label="<b>Ecole</b>"/>   
+                Ecole
+            </label>
+          </div>
+          <div name="address">
+            <label>
+                <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                        value="1"
+                        address="5 avenue Maurice Utrillo, Montmagny" 
+                        label="<b>Oum Esra</b>"
+                        content = "<i>Je peux emmenener 3 enfants, j'ai une voiture 4 places" />
+                Oum Esra
+            </label>
+          </div>
+           <div name="address">
+          <label>
+              <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                      value="2"
+                      address="5 avenue Maurice Utrillo, Argenteuil" 
+                      label="<b>Oum Aisse</b>"
+                      content = "<i>Je peux emmenener 3 enfants, j'ai une voiture 4 places" />
+              Oum Aisse
+          </label>
+        </div>
+        <div name="address">
+          <label>
+              <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                      value="3"
+                      address="5 avenue Maurice Utrillo, Villepinte" 
+                      label="<b>Oum Hajer</b>"
+                      content = "<i>Je peux emmenener 3 enfants, j'ai une voiture 4 places" />
+              Oum Hajer
+          </label>
+        </div>
+        <div name="address">
+          <label>
+              <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                      value="4"
+                      address="5 avenue Maurice Utrillo, Villetaneuse" 
+                      label="<b>Abou Amel</b>"
+                      content = "<i>Je peux emmenener 3 enfants, j'ai une voiture 4 places" />
+              Abou Amel
+          </label>
+        </div>
+        </div>
+       </div>
+       
+       <div id="footer">
+       </div>
       </div>
     </body>
+    <script type="text/javascript" src="maps.js"></script>
+    <script type="text/javascript" src="init.js"></script>
+    <script type="text/javascript" src="events.js"></script>
 
 </html>
-

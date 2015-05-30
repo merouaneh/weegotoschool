@@ -16,8 +16,15 @@ body {
   background-image: url('cars-purple-bg.png');
   background-repeat: repeat;
   background-position: left top;
-  font-family: Verdana;
+  font-family: Play;
+  font-style: normal;
+  font-variant: normal;
   font-size: 0.75em;
+}
+
+label {
+  color: rgb(22, 162, 216);
+  font-weight: bold;
 }
 
 div#container {

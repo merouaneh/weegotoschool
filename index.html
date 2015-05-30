@@ -4,6 +4,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>myapp</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="tables.css" />
     </head>
 
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
@@ -30,16 +31,22 @@
             <div class="column1"></div>
             <div class="column2"></div>
             <div class="column3"></div>
+            <div class="column3"></div>
+            <div class="column3"></div>
+            <div class="column3"></div>
+
             <div class="myrow">
               <div class="mycell" name="address" >
                 <input name="route" type="checkbox" checked="true" disabled="true" 
-                       value="0" id="roiute_0"
+                       value="0" id="route_0"
                        address="113 avenue Louis Breguet, Villepinte" 
                        label="&lt;b&gt;Ecole&lt;/b&gt;"/>
               </div>
-              <div class="mycell">
-                <label for="route_0">Ecole</label>
-              </div>
+              <div class="mycell"><label for="route_0">Ecole</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="cov"></label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="gar"></label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="dev"></label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="vac"></label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -49,9 +56,11 @@
                       label="&lt;b&gt;Oum Esra&lt;/b&gt;"
                       content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel">
-                <label for="route_1">Oum Esra</label>
-              </div>
+              <div class="mycell" name="addressLabel"><label for="route_1">Oum Esra</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -61,7 +70,11 @@
                           label="&lt;b&gt;Oum Aisse&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_1">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_2">Oum Amine</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -71,7 +84,11 @@
                           label="&lt;b&gt;Oum Hajer&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_3">Abou Issa</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -81,7 +98,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_4">Oum Hajer</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -91,7 +112,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_5">Oum Salama</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -101,7 +126,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_6">Oum Amel</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -111,7 +140,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_7">Abou Houreira</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -121,7 +154,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_8">Abou Anas</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
              
             <div class="myrow">
@@ -132,7 +169,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_9">Oum Othman</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -142,7 +183,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_10">Ibn Abbas</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -152,7 +197,11 @@
                           label="&lt;b&gt;Abou Amel&lt;/b&gt;"
                           content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
               </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Oum Esra</label></div>
+              <div class="mycell" name="addressLabel"><label for="route_11">Abou Esra</label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
             </div>
           </div>
         </div>

@@ -1,0 +1,123 @@
+
+.mytable {
+  display: table;
+}
+.myrow {
+  display: table-row;
+}
+.mycell {
+  display: table-cell;
+  color: black;
+  //height: 20px;
+  //max-height: 20px;
+}
+.column1 {
+  display: table-column;
+  //background-color: green;
+}
+.column2 {
+  display: table-column;
+}
+
+.column3 {
+  display: table-column;
+  //background-color: green;
+}
+
+
+.activity {
+  background-repeat: no-repeat;
+  color: transparent; 
+
+}
+
+
+.cov-ask-give {
+  background-image: url(ask.png), url(give.png), url(1294.png);
+  background-size: 16px, 16px, 12px;
+  background-position: right top, right bottom, left center;
+}
+
+
+.cov-ask {
+  background-image: url(ask.png), url(1294.png);
+  background-size: 16px, 12px;
+  background-position: right bottom, left center;
+
+}
+
+.cov-give {
+  background-image: url(give.png), url(1294.png);
+  background-size: 16px, 12px;
+  background-position: right top, left center;
+
+}
+
+
+
+.gar-ask-give {
+  background-image: url(ask.png), url(give.png), url(503.png);
+  background-size: 16px, 16px, 12px;
+  background-position: right top, right bottom, left center;
+
+}
+
+.gar-ask {
+  background-image: url(ask.png), url(503.png);
+  background-size: 16px, 12px;
+  background-position: right bottom, left center;
+}
+
+.gar-give {
+  background-image: url(give.png), url(503.png);
+  background-size: 16px, 12px;
+  background-position: right top, left center;
+}
+
+
+
+.dev {
+    background-image: url(1018.png);
+}
+.dev-ask-give {
+  background-image: url(ask.png), url(give.png), url(1018.png);
+  background-size: 16px, 16px, 12px;
+  background-position: right top, right bottom, left center;
+}
+.dev-ask {
+  background-image: url(ask.png), url(1018.png);
+  background-size: 16px, 12px;
+  background-position: right bottom, left center;
+
+}
+
+.dev-give {
+  background-image: url(give.png), url(1018.png);
+  background-size: 16px, 12px;
+  background-position: right top, left center;
+}
+
+.vac {
+    background-image: url(432.png);
+}
+
+.vac-ask-give {
+  color: transparent; 
+  background-image: url(ask.png), url(give.png), url(94.png);
+  background-size: 16px, 16px, 12px;
+  background-position: right top, right bottom, left center;
+}
+
+.vac-ask {
+  color: transparent; 
+  background-image: url(ask.png), url(94.png);
+  background-size: 16px, 12px;
+  background-position: right bottom, left center;
+}
+
+.vac-give {
+  color: transparent; 
+  background-image: url(give.png), url(94.png);
+  background-size: 16px, 12px;
+  background-position: right top, left center;
+}

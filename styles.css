@@ -32,6 +32,7 @@ div#map {
    height:100%;
    background-image: url(static_map.png);
    background-size: 600px 600px;
+   margin-left: 15px;
 }
 
 h1 {
@@ -42,41 +43,15 @@ h1 {
 .column {
   display: inline-block;
   text-align: left;
-  height: 600px;
+  height: 500px;
 
-}
-
-
-.mytable {
-  display: table;
-}
-.myrow {
-  display: table-row;
-}
-.mycell {
-  display: table-cell;
-  color: black;
-  //height: 20px;
-  //max-height: 20px;
-}
-.column1 {
-  display: table-column;
-  //background-color: green;
-}
-.column2 {
-  display: table-column;
-}
-
-.column3 {
-  display: table-column;
-  //background-color: green;
 }
 
 div#content{
   text-align: center;
   display: inline;
   background-color: white;
-  height: 600px;
+  height: 500px;
   padding: 5px 0px 5px 0px; 
 
 }

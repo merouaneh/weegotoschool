@@ -29,13 +29,13 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
   var div = document.createElement('div');
   div.className = 'mycell';
   var rowDiv = element.parentNode.parentNode.parentNode;
-  rowDiv.insertBefore(div, element.parentNode.parentNode);
+  //rowDiv.insertBefore(div, element.parentNode.parentNode);
 
 
   var label = document.createElement('label');
   label.innerHTML = letter;
   label.htmlFor = 'route_'+ i;
-  element.parentNode.parentNode.insertBefore(label,element.parentNode);
+  //element.parentNode.parentNode.insertBefore(label,element.parentNode);
 
   //var label = document.createElement('label');
   //label.for = element.parentNode.id;

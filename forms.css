@@ -16,20 +16,38 @@
     display: block;
     width: 15px;
     float: left;
-   // margin-bottom: 10px;
-    padding-right: 20px;
+    margin: 0px 10px 0px 0px;
 }
 
-.formLayout label[for=PS], .formLayout label[for=MS],.formLayout label[for=GS],.formLayout label[for=CP],
-.formLayout label[for=CE1],.formLayout label[for=CE2],.formLayout label[for=CM1],.formLayout label[for=CM2] {
-    width: 15px;
+
+.formLayout input[id=zip] {
+    display: block;
+    width: 40px;
+    float: left;
+    margin-right: 10px;
+    //padding-right: 30px;
+}
+
+.formLayout label[for=zip], .formLayout label[for=city]{
+    width: 65px;
     padding-right: 10px;
     margin-bottom: 0px;
 }
 
+
+
+.formLayout label[for=PS], .formLayout label[for=MS],.formLayout label[for=GS],.formLayout label[for=CP],
+.formLayout label[for=CE1],.formLayout label[for=CE2],.formLayout label[for=CM1],.formLayout label[for=CM2],
+.formLayout label[for=Lu],.formLayout label[for=Ma],.formLayout label[for=Me],.formLayout label[for=Je], .formLayout label[for=Ve] {
+
+    width: 15px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 10px 0px 0px;
+}
+
 .formLayout label {
     text-align: right;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 br {

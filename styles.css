@@ -30,15 +30,11 @@ label {
 
 
 .jfk-button , .jfk-button-action  {
-  -webkit-box-shadow: none;
 background-color: rgb(77, 144, 254);
-background-image: -webkit-linear-gradient(top, rgb(77, 144, 254), rgb(71, 135, 237));
 border-bottom-color: rgb(48, 121, 237);
 border-bottom-left-radius: 2px;
 border-bottom-right-radius: 2px;
 border-bottom-style: solid;
-border-bottom-width: 1px;
-border-collapse: collapse;
 border-left-color: rgb(48, 121, 237);
 border-left-style: solid;
 border-left-width: 1px;
@@ -48,11 +44,8 @@ border-right-width: 1px;
 border-top-color: rgb(48, 121, 237);
 border-top-left-radius: 2px;
 border-top-right-radius: 2px;
-border-top-style: solid;
 border-top-width: 1px;
-box-shadow: none;
 color: rgb(255, 255, 255);
-cursor: default;
 display: inline-block;
 font-family: '.HelveticaNeueDeskInterface-Regular';
 font-size: 11px;
@@ -62,22 +55,16 @@ font-weight: bold;
 height: 29px;
 line-height: 27px;
 list-style-type: none;
-margin-left: 0px;
-margin-right: 16px;
-margin-top: 0px;
-min-width: 54px;
+margin: 0px 16px 0px 0px;
 outline-color: rgb(255, 255, 255);
 outline-style: none;
 outline-width: 0px;
-padding-bottom: 0px;
-padding-left: 15px;
-padding-right: 15px;
-padding-top: 0px;
+padding: 0px 15px 0px 15px;
+
 text-align: center;
 vertical-align: middle;
 white-space: nowrap;
-width: 75.09375px;
-word-wrap: break-word;
+width: 75px;
 }
 
 div#container {

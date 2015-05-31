@@ -46,14 +46,14 @@
               </select>
               <br>
               <label for="childrenGrades">Classes des enfants</label>
-              <label for="PS">PS</label><input id="PS" name="childrenGrades" type="checkbox">
-              <label for="MS">MS</label><input id="MS" name="childrenGrades" type="checkbox">
-              <label for="GS">GS</label><input id="GS" name="childrenGrades" type="checkbox">
-              <label for="CP">CP</label><input id="CP" name="childrenGrades" type="checkbox">
-              <label for="CE1">CE1</label><input id="CE1" name="childrenGrades" type="checkbox">
-              <label for="CE2">CE2</label><input id="CE2" name="childrenGrades" type="checkbox">
-              <label for="CM1">CM1</label><input id="CM1" name="childrenGrades" type="checkbox">
-              <label for="CM2">CM2</label><input id="CM2" name="childrenGrades" type="checkbox">
+              <label for="PS">PS</label><input id="PS" name="childrenGrades" type="checkbox" />
+              <label for="MS">MS</label><input id="MS" name="childrenGrades" type="checkbox" />
+              <label for="GS">GS</label><input id="GS" name="childrenGrades" type="checkbox" />
+              <label for="CP">CP</label><input id="CP" name="childrenGrades" type="checkbox" />
+              <label for="CE1">CE1</label><input id="CE1" name="childrenGrades" type="checkbox" />
+              <label for="CE2">CE2</label><input id="CE2" name="childrenGrades" type="checkbox" />
+              <label for="CM1">CM1</label><input id="CM1" name="childrenGrades" type="checkbox" />
+              <label for="CM2">CM2</label><input id="CM2" name="childrenGrades" type="checkbox" />
               <br>
               <br>
               <br>
@@ -65,7 +65,7 @@
               <label for="zipWork">CP</label><input id="zipWork" name="zipWork" />
               <label for="cityWork">Ville</label><input id="cityWork" name="cityWork" /><br>
 
-              <label for="addressOther">Autre Adresse (approximative)</label><input id="addressOther" name="addressOther" />
+              <label for="addressOther">Autre Adresse (approximative)</label><input id="addressOther" name="addressOther  " />
               <label for="zipOther">CP</label><input id="zipOther" name="zipOther" />
               <label for="cityOther">Ville</label><input id="cityOther" name="cityOther" /><br>
               <br>

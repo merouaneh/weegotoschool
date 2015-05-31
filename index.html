@@ -38,22 +38,6 @@
             <div class="column3"></div>
             <div class="column3"></div>
             <div class="column3"></div>
-
-
-<?php
-include 'common.php';
-// Get tweets collection in MongoDB.
-$collection = get_collection(TWEETS_COLLECTION);
-$cursor     = $collection->find();
-$resarray   = iterator_to_array($cursor);
-?>
-
-<?php
-    echo "<caption>MongoDB: A timeline of saved tweets [" . count($resarray) .
-         "]<br />an <a href=\"https://www.openshift.com/\" target=\"_new\">OpenShift</a> demo application with MongoDB -- follow us <a href=\"https://twitter.com/#!/openshift\" target=\"_new\">@openshift</a></caption>\n";
-?>
-
-
             <div class="myrow">
               <div class="mycell" name="address" >
                 <input name="route" type="checkbox" checked="true" disabled="true" 

@@ -57,28 +57,28 @@
               <br>
               <br>
               <br>
-              <label for="address">Adresse résidence (approximative)</label><input id="address">
-              <label for="zip">CP</label><input id="zip">
-              <label for="city">Ville</label><input id="city"><br>
+              <label for="addressHome">Adresse résidence (approximative)</label><input id="addressHome">
+              <label for="zipHome">CP</label><input id="zipHome">
+              <label for="cityHome">Ville</label><input id="cityHome"><br>
 
-              <label for="address">Adresse travail (approximative)</label><input id="address">
-              <label for="zip">CP</label><input id="zip">
-              <label for="city">Ville</label><input id="city"><br>
+              <label for="addressWork">Adresse travail (approximative)</label><input id="addressWork">
+              <label for="zipWork">CP</label><input id="zipWork">
+              <label for="cityWork">Ville</label><input id="cityWork"><br>
 
-              <label for="address">Autre Adresse (approximative)</label><input id="address">
-              <label for="zip">CP</label><input id="zip">
-              <label for="city">Ville</label><input id="city"><br>
+              <label for="addressOther">Autre Adresse (approximative)</label><input id="addressOther">
+              <label for="zipOther">CP</label><input id="zipOther">
+              <label for="cityOther">Ville</label><input id="cityOther"><br>
               <br>
               <br>
               <br>
 
-              <label>Je cherche de l'aide pour : </label>
+              <label>Cherche de l'aide pour : </label>
               <label for="Lu">Lu</label>
               <label for="Ma">Ma</label>
               <label for="Me">Me</label>
               <label for="Je">Je</label>
               <label for="Ve">Ve</label>
-              <label>Je propose de l'aide pour : </label>
+              <label>Propose de l'aide pour : </label>
               <label for="Lu">Lu</label>
               <label for="Ma">Ma</label>
               <label for="Me">Me</label>

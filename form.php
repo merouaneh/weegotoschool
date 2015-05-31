@@ -73,17 +73,18 @@
               <br>
 
               <label>Cherche de l'aide pour : </label>
-              <label for="Lu">Lu</label>
-              <label for="Ma">Ma</label>
-              <label for="Me">Me</label>
-              <label for="Je">Je</label>
-              <label for="Ve">Ve</label>
+              <label for="Lu" onClick="toggleAll(this);">Lu</label>
+              <label for="Ma" onClick="toggleAll(this);">Ma</label>
+              <label for="Me" onClick="toggleAll(this);">Me</label>
+              <label for="Je" onClick="toggleAll(this);">Je</label>
+              <label for="Ve" onClick="toggleAll(this);">Ve</label>
+              
               <label>Propose de l'aide pour : </label>
-              <label for="Lu">Lu</label>
-              <label for="Ma">Ma</label>
-              <label for="Me">Me</label>
-              <label for="Je">Je</label>
-              <label for="Ve">Ve</label>
+              <label for="Lu" onClick="toggleAll(this);">Lu</label>
+              <label for="Ma" onClick="toggleAll(this);">Ma</label>
+              <label for="Me" onClick="toggleAll(this);">Me</label>
+              <label for="Je" onClick="toggleAll(this);">Je</label>
+              <label for="Ve" onClick="toggleAll(this);">Ve</label>
               <br>
               <label for="chercheCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
               <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Lu"/>
@@ -120,7 +121,7 @@
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Je" />
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ve" />
 
-              <label for="proposeGarderie[]"" onClick="toggleAll(this);>Garderie</label>
+              <label for="proposeGarderie[]" onClick="toggleAll(this);">Garderie</label>
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Lu" />
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ma" />
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Me" />

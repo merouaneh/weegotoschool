@@ -30,7 +30,7 @@
               <label for="name">Vos nom et prénoms</label><input id="name" name="name">
               <label for="parente">Lien de parenté</label>
               <select id="parente" name="parente">
-                  <option>Mère</option><option>Père</option><option>Grand-Mère</option><option>Grand-Père</option>
+                  <option selected disabled hidden value=''></option><option>Mère</option><option>Père</option><option>Grand-Mère</option><option>Grand-Père</option>
                   <option>Tante maternelle</option><option>Oncle maternel</option><option>Tante paternelle</option><option>Oncle paternel</option>
                   <option>Voisine ou amie des parents</option><option>Voisin ou amie des parents</option>
               </select>
@@ -57,17 +57,17 @@
               <br>
               <br>
               <br>
-              <label for="addressHome">Adresse résidence (approximative)</label><input id="addressHome">
-              <label for="zipHome">CP</label><input id="zipHome">
-              <label for="cityHome">Ville</label><input id="cityHome"><br>
+              <label for="addressHome">Adresse résidence (approximative)</label><input id="addressHome" name="addressHome" />
+              <label for="zipHome">CP</label><input id="zipHome" name="zipHome" />
+              <label for="cityHome">Ville</label><input id="cityHome" name="cityHome" /><br>
 
-              <label for="addressWork">Adresse travail (approximative)</label><input id="addressWork">
-              <label for="zipWork">CP</label><input id="zipWork">
-              <label for="cityWork">Ville</label><input id="cityWork"><br>
+              <label for="addressWork">Adresse travail (approximative)</label><input id="addressWork" name="addressWork" />
+              <label for="zipWork">CP</label><input id="zipWork" name="zipWork" />
+              <label for="cityWork">Ville</label><input id="cityWork" name="cityWork" /><br>
 
-              <label for="addressOther">Autre Adresse (approximative)</label><input id="addressOther">
-              <label for="zipOther">CP</label><input id="zipOther">
-              <label for="cityOther">Ville</label><input id="cityOther"><br>
+              <label for="addressOther">Autre Adresse (approximative)</label><input id="addressOther" name="addressOther" />
+              <label for="zipOther">CP</label><input id="zipOther" name="zipOther" />
+              <label for="cityOther">Ville</label><input id="cityOther" name="cityOther" /><br>
               <br>
               <br>
               <br>

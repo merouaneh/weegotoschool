@@ -92,63 +92,63 @@
               <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturage[]" value="Je"/>
               <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturage[]" value="Ve"/>
               <label>Covoiturage/pedibus</label>
-              <input type="checkbox" id="proposeCovoiturageLu" name="proposeCovoiturageLu" >
-              <input type="checkbox" id="proposeCovoiturageMa" name="proposeCovoiturageMa" >
-              <input type="checkbox" id="proposeCovoiturageMe" name="proposeCovoiturageMe" >
-              <input type="checkbox" id="proposeCovoiturageJe" name="proposeCovoiturageJe" >
-              <input type="checkbox" id="proposeCovoiturageVe" name="proposeCovoiturageVe" >
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Lu" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Ma" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Me" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Je" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Ve" />
               <br>
               <label for="cantineDays">Cantine</label>
-              <input type="checkbox" id="chercheCantineLu" name="chercheCantineLu" >
-              <input type="checkbox" id="chercheCantineMa" name="chercheCantineMa" >
-              <input type="checkbox" id="chercheCantineMe" name="chercheCantineMe" >
-              <input type="checkbox" id="chercheCantineJe" name="chercheCantineJe" >
-              <input type="checkbox" id="chercheCantineVe" name="chercheCantineVe" >
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Lu" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Ma" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Me" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Je" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Ve" />
               <label for="cantineDays">Cantine</label>
-              <input type="checkbox" id="proposeCantineLu" name="proposeCantineLu" >
-              <input type="checkbox" id="proposeCantineMa" name="proposeCantineMa" >
-              <input type="checkbox" id="proposeCantineMe" name="proposeCantineMe" >
-              <input type="checkbox" id="proposeCantineJe" name="proposeCantineJe" >
-              <input type="checkbox" id="proposeCantineVe" name="proposeCantineVe" >
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Lu" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Ma" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Me" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Je" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Ve" />
               <br>
               <label for="garderieDays">Garderie</label>
-              <input type="checkbox" id="chercheGarderieLu" name="chercheGarderieLu" >
-              <input type="checkbox" id="chercheGarderieMa" name="chercheGarderieMa" >
-              <input type="checkbox" id="chercheGarderieMe" name="chercheGarderieMe" >
-              <input type="checkbox" id="chercheGarderieJe" name="chercheGarderieJe" >
-              <input type="checkbox" id="chercheGarderieVe" name="chercheGarderieVe" >
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Lu" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ma" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Me" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Je" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ve" />
               <label for="garderieDays">Garderie</label>
-              <input type="checkbox" id="proposeGarderieLu" name="proposeGarderieLu" >
-              <input type="checkbox" id="proposeGarderieMa" name="proposeGarderieMa" >
-              <input type="checkbox" id="proposeGarderieMe" name="proposeGarderieMe" >
-              <input type="checkbox" id="proposeGarderieJe" name="proposeGarderieJe" >
-              <input type="checkbox" id="proposeGarderieVe" name="proposeGarderieVe" >
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Lu" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ma" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Me" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Je" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ve" />
               <br>
               <label for="devoirDays">Devoirs</label>
-              <input type="checkbox" id="chercheDevoirsLu" name="chercheDevoirsLu" >
-              <input type="checkbox" id="chercheDevoirsMa" name="chercheDevoirsMa" >
-              <input type="checkbox" id="chercheDevoirsMe" name="chercheDevoirsMe" >
-              <input type="checkbox" id="chercheDevoirsJe" name="chercheDevoirsJe" >
-              <input type="checkbox" id="chercheDevoirsVe" name="chercheDevoirsVe" >
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Lu" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Ma" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Me" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Je" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Ve" />
               <label for="devoirDays">Devoirs</label>
-              <input type="checkbox" id="proposeDevoirsLu" name="proposeDevoirsLu" >
-              <input type="checkbox" id="proposeDevoirsMa" name="proposeDevoirsMa" >
-              <input type="checkbox" id="proposeDevoirsMe" name="proposeDevoirsMe" >
-              <input type="checkbox" id="proposeDevoirsJe" name="proposeDevoirsJe" >
-              <input type="checkbox" id="proposeDevoirsVe" name="proposeDevoirsVe" >
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Lu" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Ma" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Me" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Je" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Ve" />
               <br>
               <label for="vacancesDays">Vacances</label>
-              <input type="checkbox" id="chercheGardeVacancesLu" name="chercheGardeVacancesLu" >
-              <input type="checkbox" id="chercheGardeVacancesMa" name="chercheGardeVacancesMa" >
-              <input type="checkbox" id="chercheGardeVacancesMe" name="chercheGardeVacancesMe" >
-              <input type="checkbox" id="chercheGardeVacancesJe" name="chercheGardeVacancesJe" >
-              <input type="checkbox" id="chercheGardeVacancesVe" name="chercheGardeVacancesVe" >
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Lu" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Ma" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Me" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Je" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Ve" />
               <label for="vacancesDays">Vacances</label>
-              <input type="checkbox" id="proposeGardeVacancesLu" name="proposeGardeLu" >
-              <input type="checkbox" id="proposeGardeMa" name="proposeGardeMa" >
-              <input type="checkbox" id="proposeGardeMe" name="proposeGardeMe" >
-              <input type="checkbox" id="proposeGardeJe" name="proposeGardeJe" >
-              <input type="checkbox" id="proposeGardeVe" name="proposeGardeVe" >
+              <input type="checkbox" id="proposeGardeVacances[]" name="proposeGarde[]" value="Lu" />
+              <input type="checkbox" id="proposeGarde[]" name="proposeGarde[]" value="Ma" />
+              <input type="checkbox" id="proposeGarde[]" name="proposeGarde[]" value="Me" />
+              <input type="checkbox" id="proposeGarde[]" name="proposeGarde[]" value="Je" />
+              <input type="checkbox" id="proposeGarde[]" name="proposeGarde[]" value="Ve" />
               <br>
               <br>
               <br>

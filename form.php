@@ -25,7 +25,7 @@
 
        <div id="content" class="container">
         <div id="form">
-          <form action="form.php" method="post">
+          <form action="process.php" method="post">
             <div class="formLayout">
               <label for="name">Vos nom et prénoms</label><input id="name" name="name">
               <label for="parente">Lien de parenté</label>

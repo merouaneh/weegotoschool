@@ -86,11 +86,11 @@
               <label for="Ve">Ve</label>
               <br>
               <label>Covoiturage/pedibus</label>
-              <input type="checkbox" id="cherheCovoiturageLu" name="cherheCovoiturageLu" >
-              <input type="checkbox" id="cherheCovoiturageMa" name="cherheCovoiturageMa" >
-              <input type="checkbox" id="cherheCovoiturageMe" name="cherheCovoiturageMe" >
-              <input type="checkbox" id="cherheCovoiturageJe" name="cherheCovoiturageJe" >
-              <input type="checkbox" id="cherheCovoiturageVe" name="cherheCovoiturageVe" >
+              <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturageLu" value="Lu"/>
+              <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturageMa" value="Ma"/>
+              <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturageMe" value="Me"/>
+              <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturageJe" value="Je"/>
+              <input type="checkbox" id="cherheCovoiturage[]" name="cherheCovoiturageVe" value="Ve"/>
               <label>Covoiturage/pedibus</label>
               <input type="checkbox" id="proposeCovoiturageLu" name="proposeCovoiturageLu" >
               <input type="checkbox" id="proposeCovoiturageMa" name="proposeCovoiturageMa" >

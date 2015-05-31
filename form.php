@@ -41,7 +41,7 @@
               <label for="childFirstname">Noms et prénoms des enfants</label><input id="childFirstname" name="childFirstname">
               <label for="childrenNumber">Nombre d'enfants</label>
               <select id="childrenNumber" name="childrenNumber">
-                  <option>1</option><option>2</option><option>3</option><option>4</option>
+                  <option selected disabled hidden value=''></option><option>1</option><option>2</option><option>3</option><option>4</option>
                   <option>5</option><option>6</option>
               </select>
               <br>

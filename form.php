@@ -36,6 +36,7 @@
               </select>
               <br>
               <label for="email">Adresse e-mail</label><input id="email">
+              <label for="telephone">N° téléphone</label><input id="telephone">
               <br>
               <label for="childFirstname">Noms et prénoms des enfants</label><input id="childFirstname" name="childFirstname">
               <label for="childrenNumber">Nombre d'enfants</label>

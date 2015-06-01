@@ -57,15 +57,18 @@
               <br>
               <br>
               <br>
-              <label for="addressHome">Adresse résidence (approximative)</label><input id="addressHome" name="addressHome" />
+              <label for="addressHome">Adresse résidence</label>
+              <input id="addressHome" name="addressHome" placeholder="Adresse approchée sans n° de rue"/>
               <label for="zipHome">CP</label><input id="zipHome" name="zipHome" />
               <label for="cityHome">Ville</label><input id="cityHome" name="cityHome" /><br>
 
-              <label for="addressWork">Adresse travail (approximative)</label><input id="addressWork" name="addressWork" />
+              <label for="addressWork">Adresse travail</label>
+              <input id="addressWork" name="addressWork" />
               <label for="zipWork">CP</label><input id="zipWork" name="zipWork" />
               <label for="cityWork">Ville</label><input id="cityWork" name="cityWork" /><br>
 
-              <label for="addressOther">Autre Adresse (approximative)</label><input id="addressOther" name="addressOther  " />
+              <label for="addressOther">Autre Adresse</label>
+              <input id="addressOther" name="addressOther  " />
               <label for="zipOther">CP</label><input id="zipOther" name="zipOther" />
               <label for="cityOther">Ville</label><input id="cityOther" name="cityOther" /><br>
               <br>
@@ -159,8 +162,7 @@
               <br>
               <label for="classified">Votre annonce</label>
               <textarea id="classified" name="classified" cols="80"
-                        placeholder="Entrer ici des détails de l'annonce: Par exemple: J'ai une voiture 4 places. Je travaille à Villemombre">
-              </textarea>
+              placeholder="Entrer ici des détails de l'annonce: Par exemple: J'ai une voiture 4 places. Je travaille à Villemombre"></textarea>
               <br>
               <br>
               <br>

@@ -102,3 +102,22 @@ label.generalAction {
 br {
     clear: left;
 }
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.7em;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.7em;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 0.7em;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.7em;
+}
+
+
+
+
+

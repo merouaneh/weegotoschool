@@ -22,15 +22,20 @@ Developing on OpenShift also creates an embedded git repository in OpenShift.
 To simplyify developing, I hardly encourage you to enables dual push to simultaneously push all your commits on OpenShift and on your GitHub account.
 
 To do this: Add a remote named "all" and add 2 push urls to it.
-
+```
 git remote add all ssh://23456781234567@yourapp-namespace.rhcloud.com/~/git/weegotoschool.git
 git remote set-url origin --push --add ssh://23456781234567@weegotoschool-namespace.rhcloud.com/~/git/weegotoschool.git
 git remote set-url origin --push --add git@github.com:youruser/weegotoschool.git
-Then set the remote named 'all' as the default push remote:
+```
 
+Then set the remote named 'all' as the default push remote:
+```
 git push -u all
+```
 To commit and push your code, proceed as usual: It will push on the 2 remotes and deploy on OpenShift
 
+```
 git add .
 git commit -m "my commit"
 git push
+```

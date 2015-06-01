@@ -72,14 +72,14 @@
               <br>
               <br>
 
-              <label>Cherche de l'aide pour : </label>
+              <label class="generalAction">Cherche de l'aide pour : </label>
               <label for="Lu" onClick="toggleAll(this);">Lu</label>
               <label for="Ma" onClick="toggleAll(this);">Ma</label>
               <label for="Me" onClick="toggleAll(this);">Me</label>
               <label for="Je" onClick="toggleAll(this);">Je</label>
               <label for="Ve" onClick="toggleAll(this);">Ve</label>
               
-              <label>Propose de l'aide pour : </label>
+              <label class="generalAction">Propose de l'aide pour : </label>
               <label for="Lu" onClick="toggleAll(this);">Lu</label>
               <label for="Ma" onClick="toggleAll(this);">Ma</label>
               <label for="Me" onClick="toggleAll(this);">Me</label>

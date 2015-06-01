@@ -1,3 +1,5 @@
+
+
 .formLayout {
     background-color: #f3f3f3;
     border: solid 1px #a1a1a1;
@@ -5,6 +7,11 @@
     margin-left: auto;
     margin-right: auto;
     width: 700px;
+}
+
+.formLayout label {
+    text-align: right;
+    padding-right: 10px;
 }
 
 .formLayout label, .formLayout input, .formLayout select {
@@ -21,8 +28,6 @@
     margin: 0px 10px 0px 0px;
 }
 
-
-
 .formLayout label[id=proposeCovoiturage] , .formLayout label[id=chercheCovoiturage] , 
 .formLayout label[id=proposeCantine] , .formLayout label[id=chercheCantine] , 
 .formLayout label[id=proposeGarderie] , .formLayout label[id=chercheGarderie] , 
@@ -30,7 +35,8 @@
 .formLayout label[id=proposeGardeVacances] , .formLayout label[id=chercheGardeVacances] {
     background-repeat: no-repeat, no-repeat;
     background-position: right, right center;
-    padding-right: 22px; 
+    padding-right: 24px;
+    margin-right: 4px;
     background-size: 16px, 16px;
 }
 
@@ -57,7 +63,9 @@
 
 }
 
-
+label.generalAction {
+    padding-right: 26px; 
+}
 
 .formLayout input[id=zip], .formLayout input[id=zipHome], .formLayout input[id=zipWork] ,  .formLayout input[id=zipOther]   {
     display: block;
@@ -87,15 +95,9 @@
 .formLayout label[for=PS], .formLayout label[for=MS],.formLayout label[for=GS],.formLayout label[for=CP],
 .formLayout label[for=CE1],.formLayout label[for=CE2],.formLayout label[for=CM1],.formLayout label[for=CM2],
 .formLayout label[for=Lu],.formLayout label[for=Ma],.formLayout label[for=Me],.formLayout label[for=Je], .formLayout label[for=Ve] {
-
     width: 15px;
     padding: 0px 0px 0px 0px;
     margin: 0px 10px 0px 0px;
-}
-
-.formLayout label {
-    text-align: right;
-    padding-right: 10px;
 }
 
 br {

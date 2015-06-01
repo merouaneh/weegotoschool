@@ -139,16 +139,11 @@ div#header {
 }
 
 div#banner, div#footer {
-  background-image: url(images/theme_header_cars2.png);
-  text-align: center;
+  background: url(images/theme_header_cars2.png) repeat;
+  background-size: 320px 100px;
   margin-left: auto;
   display: block;
-
-  background-repeat: repeat;
-  text-align: center;
   height:100px;
-  background-size: 320px 100px;
-  display: block;
 
 }
 

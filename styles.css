@@ -121,11 +121,16 @@ div#right {
   table-layout: auto;
 }
 
-div#coran {
+div.arabic {
+  direction: rtl;
+}
+
+div.coran {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   direction: rtl;
+  font-size: 1.2em;
 }
 
 div#header {

@@ -17,10 +17,11 @@
         <div id="banner"></div>
         <div id="title"><h1>Entraide Ecole</h1></div>
         <div id="intro">
-          <div id="coran">
+          <div id="coran" class="coran arabic">
             ﴿ یٰۤاَیُّہَا الَّذِیۡنَ اٰمَنُوۡا لَا تُحِلُّوۡا شَعَآئِرَ اللّٰہِ وَ لَا الشَّہۡرَ الۡحَرَامَ وَ لَا الۡہَدۡیَ وَ لَا الۡقَلَآئِدَ وَ لَاۤ  آٰمِّیۡنَ الۡبَیۡتَ الۡحَرَامَ یَبۡتَغُوۡنَ فَضۡلًا مِّنۡ رَّبِّہِمۡ وَ رِضۡوَانًا ؕ وَ اِذَا حَلَلۡتُمۡ فَاصۡطَادُوۡا ؕ وَ لَا یَجۡرِمَنَّکُمۡ شَنَاٰنُ قَوۡمٍ اَنۡ صَدُّوۡکُمۡ عَنِ الۡمَسۡجِدِ الۡحَرَامِ اَنۡ تَعۡتَدُوۡا ۘ وَ تَعَاوَنُوۡا عَلَی الۡبِرِّ وَ التَّقۡوٰی ۪ وَ لَا تَعَاوَنُوۡا عَلَی الۡاِثۡمِ وَ الۡعُدۡوَانِ ۪ وَ اتَّقُوا اللّٰہَ ؕ اِنَّ اللّٰہَ  شَدِیۡدُ الۡعِقَابِ ﴾
           </div>
-          السلام عليكم 
+          <br/>
+          <div class="arabic">السلام عليكم</div>
           <br/>
           Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
       </div>

@@ -35,11 +35,11 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
   var label = document.createElement('label');
   label.innerHTML = letter;
   label.htmlFor = 'route_'+ i;
-  //element.parentNode.parentNode.insertBefore(label,element.parentNode);
+  element.parentNode.parentNode.insertBefore(label,element.parentNode);
 
-  //var label = document.createElement('label');
-  //label.for = element.parentNode.id;
- // label.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML;
+  var label = document.createElement('label');
+  label.for = element.parentNode.id;
+  label.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML;
   //element.parentNode.innerHTML = '[' + letter + ']' + element.parentNode.innerHTML
   //element.parentNode.insertBefore(label, element);
 

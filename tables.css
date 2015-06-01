@@ -8,12 +8,9 @@
 .mycell {
   display: table-cell;
   color: black;
-  //height: 20px;
-  //max-height: 20px;
 }
 .column1 {
   display: table-column;
-  //background-color: green;
 }
 .column2 {
   display: table-column;
@@ -21,7 +18,6 @@
 
 .column3 {
   display: table-column;
-  //background-color: green;
 }
 
 

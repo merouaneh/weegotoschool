@@ -157,6 +157,11 @@
               <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Ve" />
               <br>
               <br>
+              <label for="classified">Votre annonce</label>
+              <textarea id="classified" name="classified" cols="80"
+                        placeholder="Entrer ici des détails de l'annonce: Par exemple: J'ai une voiture 4 places. Je travaille à Villemombre">
+              </textarea>
+              <br>
               <br>
               <br>
               

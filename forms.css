@@ -21,6 +21,14 @@
     margin-bottom: 10px;
 }
 
+.formLayout textarea {
+    display: block;
+    width: 450px;
+    height: 150px;
+    float: left;
+    margin-bottom: 10px;
+}
+
 .formLayout input[type=checkbox] {
     display: block;
     width: 15px;

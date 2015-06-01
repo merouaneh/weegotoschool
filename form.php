@@ -86,70 +86,70 @@
               <label for="Je" onClick="toggleAll(this);">Je</label>
               <label for="Ve" onClick="toggleAll(this);">Ve</label>
               <br>
-              <label for="chercheCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
+              <label id="chercheCovoiturage" for="chercheCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
               <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Lu"/>
               <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Ma"/>
               <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Me"/>
               <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Je"/>
               <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Ve"/>
 
-              <label for="proposeCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
+              <label id="proposeCovoiturage" for="proposeCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
               <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Lu" />
               <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Ma" />
               <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Me" />
               <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Je" />
               <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Ve" />
               <br>
-              <label for="chercheCantine[]" onClick="toggleAll(this);">Cantine</label>
+              <label id="chercheCantine" for="chercheCantine[]" onClick="toggleAll(this);">Cantine</label>
               <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Lu" />
               <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Ma" />
               <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Me" />
               <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Je" />
               <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Ve" />
 
-              <label for="proposeCantine[]" onClick="toggleAll(this);">Cantine</label>
+              <label id="proposeCantine" for="proposeCantine[]" onClick="toggleAll(this);">Cantine</label>
               <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Lu" />
               <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Ma" />
               <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Me" />
               <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Je" />
               <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Ve" />
               <br>
-              <label for="chercheGarderie[]" onClick="toggleAll(this);">Garderie</label>
+              <label id="chercheGarderie" for="chercheGarderie[]" onClick="toggleAll(this);">Garderie</label>
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Lu" />
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ma" />
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Me" />
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Je" />
               <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ve" />
 
-              <label for="proposeGarderie[]" onClick="toggleAll(this);">Garderie</label>
+              <label id="proposeGarderie" for="proposeGarderie[]" onClick="toggleAll(this);">Garderie</label>
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Lu" />
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ma" />
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Me" />
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Je" />
               <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ve" />
               <br>
-              <label for="chercheDevoirs[]" onClick="toggleAll(this);">Devoirs</label>
+              <label id="chercheDevoirs" for="chercheDevoirs[]" onClick="toggleAll(this);">Devoirs</label>
               <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Lu" />
               <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Ma" />
               <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Me" />
               <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Je" />
               <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Ve" />
 
-              <label for="proposeDevoirs[]" onClick="toggleAll(this);">Devoirs</label>
+              <label id="proposeDevoirs" for="proposeDevoirs[]" onClick="toggleAll(this);">Devoirs</label>
               <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Lu" />
               <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Ma" />
               <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Me" />
               <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Je" />
               <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Ve" />
               <br>
-              <label for="chercheGardeVacances[]" onClick="toggleAll(this);">Vacances</label>
+              <label id="chercheGardeVacances" for="chercheGardeVacances[]" onClick="toggleAll(this);">Vacances</label>
               <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Lu" />
               <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Ma" />
               <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Me" />
               <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Je" />
               <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Ve" />
 
-              <label for="proposeGardeVacances[]" onClick="toggleAll(this);">Vacances</label>
+              <label id="proposeGardeVacances" for="proposeGardeVacances[]" onClick="toggleAll(this);">Vacances</label>
               <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Lu" />
               <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Ma" />
               <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Me" />

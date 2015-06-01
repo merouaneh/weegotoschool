@@ -3,7 +3,9 @@ include 'common.php';
 
 $json = json_encode($_POST);
 echo $json;
+?>
 
+/*
 //  Check if we need to recreate the collection.
 $r_opts = array('r', 'recreate');
 if (true == is_option_set($r_opts) ) {
@@ -31,3 +33,4 @@ echo $collection;
 
 
 ?>
+*/

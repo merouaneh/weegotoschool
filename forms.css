@@ -27,23 +27,23 @@
 .formLayout label[id=proposeDevoirs] , .formLayout label[id=chercheDevoirs] , 
 .formLayout label[id=proposeGardeVacances] , .formLayout label[id=chercheGardeVacances] {
     background-repeat: no-repeat, no-repeat;
-    background-position: right top, right center;
+    background-position: right, right center;
     padding-right: 22px; 
     background-size: 16px, 16px;
 }
 
 .formLayout label[id=proposeCovoiturage] {background-image: url(give.png), url(1294.png);}
-.formLayout label[id=proposeCantine]  {background-image: url(give.png), url(1294.png);}
-.formLayout label[id=proposeGarderie] {background-image: url(give.png), url(503.png);}
+.formLayout label[id=proposeCantine]  {background-image: url(give.png), url(493.png);}
+.formLayout label[id=proposeGarderie] {background-image: url(give.png), url(802.png);}
 .formLayout label[id=proposeDevoirs] {background-image: url(give.png), url(1018.png);}
-.formLayout label[id=proposeGardeVacances] {background-image: url(give.png), url(94.png);}
+.formLayout label[id=proposeGardeVacances] {background-image: url(give.png), url(432.png);}
 
 
 .formLayout label[id=chercheCovoiturage] {background-image: url(ask.png), url(1294.png);}
-.formLayout label[id=chercheCantine]  {background-image: url(ask.png), url(1294.png);}
-.formLayout label[id=chercheGarderie] {background-image: url(ask.png), url(503.png);}
+.formLayout label[id=chercheCantine]  {background-image: url(ask.png), url(493.png);}
+.formLayout label[id=chercheGarderie] {background-image: url(ask.png), url(802.png);}
 .formLayout label[id=chercheDevoirs] {background-image: url(ask.png), url(1018.png);}
-.formLayout label[id=chercheGardeVacances] {background-image: url(ask.png), url(94.png);}
+.formLayout label[id=chercheGardeVacances] {background-image: url(ask.png), url(432.png);}
 
 
 #proposeCovoiturage {

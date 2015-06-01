@@ -54,15 +54,6 @@
 .formLayout label[id=chercheGardeVacances] {background-image: url(images/ask.png), url(images/432.png);}
 
 
-#proposeCovoiturage {
-    background-image: url(images/give.png), url(1294.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: right top, right center;
-    padding-right: 22px; 
-    background-size: 16px, 16px;
-
-}
-
 label.generalAction {
     padding-right: 26px; 
 }

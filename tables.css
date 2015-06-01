@@ -32,29 +32,71 @@
 }
 
 
-.cov-ask-give {
-  background-image: url(images/ask.png), url(images/give.png), url(images/1294.png);
-  background-size: 16px, 16px, 12px;
-  background-position: right top, right bottom, left center;
+.cov-ask-give , .gar-ask-give , .dev-ask-give, .can-ask-give, .vac-ask-give{
+  background-image: url(images/ask.png), url(images/give.png);
+  background-size: 16px, 16px;
+  background-position: right bottom 1px, right bottom 6px;
 }
 
 
-.cov-ask {
-  background-image: url(images/ask.png), url(images/1294.png);
-  background-size: 16px, 12px;
-  background-position: right bottom, left center;
+.cov-ask, .gar-ask , .dev-ask, .can-ask, .vac-ask{
+   background-image: url(images/ask.png);
+  background-size:  16px;
+  background-position: right bottom 1px;
+
 
 }
 
-.cov-give {
-  background-image: url(images/give.png), url(images/1294.png);
-  background-size: 16px, 12px;
-  background-position: right top, left center;
-
+.cov-give , .gar-give, .dev-give, .can-give, .vac-give{
+  background-image: url(images/give.png);
+  background-size: 16px;
+  background-position: right bottom 6px;
 }
 
 
 
+.gar {
+  background-image: url(images/802.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.can {
+  background-image: url(images/493.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.cov {
+  background-image: url(images/1294.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.dev {
+  background-image: url(images/1018.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.vac {
+  background-image: url(images/432.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/*
 .gar-ask-give {
   background-image: url(images/ask.png), url(images/give.png), url(images/802.png);
   background-size: 16px, 16px, 12px;
@@ -68,12 +110,12 @@
   background-position: right bottom, left center;
 }
 
+
 .gar-give {
   background-image: url(images/give.png), url(images/802.png);
   background-size: 16px, 12px;
   background-position: right top, left center;
 }
-
 
 
 .dev {
@@ -121,3 +163,5 @@
   background-size: 16px, 12px;
   background-position: right top, left center;
 }
+
+*/

@@ -46,10 +46,11 @@
                        label="&lt;b&gt;Ecole&lt;/b&gt;"/>
               </div>
               <div class="mycell"><label for="route_0">Ecole</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="cov"></label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="gar"></label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="dev"></label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="vac"></label></div>
+              <div class="mycell cov" name="covoiturage"><label for="route_1" class="cov"></label></div>
+              <div class="mycell gar" name="garderie"><label for="route_1" class="gar"></label></div>
+              <div class="mycell dev" name="devoirs"><label for="route_1" class="dev"></label></div>
+              <div class="mycell vac" name="vacances"><label for="route_1" class="vac"></label></div>
+              <div class="mycell can" name="cantine"><label for="route_1" class="can"></label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -64,6 +65,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-ask">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >

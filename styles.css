@@ -13,7 +13,7 @@ $div {
 */
 
 body {
-  background-image: url('cars-purple-bg.png');
+  background-image: url('images/cars-purple-bg.png');
   background-repeat: repeat;
   background-position: left top;
   font-family: Play;
@@ -77,7 +77,7 @@ div#container {
 
 div#map {
    height:100%;
-   background-image: url(static_map.png);
+   background-image: url(images/static_map.png);
    background-size: 600px 600px;
    margin-left: 15px;
 }
@@ -121,13 +121,20 @@ div#right {
   table-layout: auto;
 }
 
+div#coran {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  direction: rtl;
+}
+
 div#header {
   background-color: white;
   padding-bottom: 10px;
 }
 
 div#banner, div#footer {
-  background-image: url(theme_header_cars2.png);
+  background-image: url(images/theme_header_cars2.png);
   text-align: center;
   margin-left: auto;
   display: block;

@@ -40,22 +40,22 @@
     background-size: 16px, 16px;
 }
 
-.formLayout label[id=proposeCovoiturage] {background-image: url(give.png), url(1294.png);}
-.formLayout label[id=proposeCantine]  {background-image: url(give.png), url(493.png);}
-.formLayout label[id=proposeGarderie] {background-image: url(give.png), url(802.png);}
-.formLayout label[id=proposeDevoirs] {background-image: url(give.png), url(1018.png);}
-.formLayout label[id=proposeGardeVacances] {background-image: url(give.png), url(432.png);}
+.formLayout label[id=proposeCovoiturage] {background-image: url(images/give.png), url(images/1294.png);}
+.formLayout label[id=proposeCantine]  {background-image: url(images/give.png), url(images/493.png);}
+.formLayout label[id=proposeGarderie] {background-image: url(images/give.png), url(images/802.png);}
+.formLayout label[id=proposeDevoirs] {background-image: url(images/give.png), url(images/1018.png);}
+.formLayout label[id=proposeGardeVacances] {background-image: url(images/give.png), url(images/432.png);}
 
 
-.formLayout label[id=chercheCovoiturage] {background-image: url(ask.png), url(1294.png);}
-.formLayout label[id=chercheCantine]  {background-image: url(ask.png), url(493.png);}
-.formLayout label[id=chercheGarderie] {background-image: url(ask.png), url(802.png);}
-.formLayout label[id=chercheDevoirs] {background-image: url(ask.png), url(1018.png);}
-.formLayout label[id=chercheGardeVacances] {background-image: url(ask.png), url(432.png);}
+.formLayout label[id=chercheCovoiturage] {background-image: url(images/ask.png), url(images/1294.png);}
+.formLayout label[id=chercheCantine]  {background-image: url(images/ask.png), url(images/493.png);}
+.formLayout label[id=chercheGarderie] {background-image: url(images/ask.png), url(images/802.png);}
+.formLayout label[id=chercheDevoirs] {background-image: url(images/ask.png), url(images/1018.png);}
+.formLayout label[id=chercheGardeVacances] {background-image: url(images/ask.png), url(images/432.png);}
 
 
 #proposeCovoiturage {
-    background-image: url(give.png), url(1294.png);
+    background-image: url(images/give.png), url(1294.png);
     background-repeat: no-repeat, no-repeat;
     background-position: right top, right center;
     padding-right: 22px; 

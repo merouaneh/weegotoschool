@@ -7,10 +7,10 @@ A map to dispaly mutliple routes to help people share cars to get kids at school
 Weegotoschool can easily be run on OpenShift (the Open Source Platform as a Service (PaaS)) provided by Red Hat.
 
 Start first with creating an account on OpenShift, it is free and require nothing less than a valid email address:
-https://www.openshift.com/app/account/new
+[Create an OpenShift account](https://www.openshift.com/app/account/new)
 
 Once this step achieved, you can then just clic the following link:
-https://openshift.redhat.com/app/console/application_types/custom?name=weegotoschool&initial_git_url=https%3A%2F%2Fgithub.com/akram/weegotoschool.git&cartridges[]=php-5.4&cartridges[]=mongodb
+[Instantiate WeeGoToSchool Cartridge on OpenShift](https://openshift.redhat.com/app/console/application_types/custom?name=weegotoschool&initial_git_url=https%3A%2F%2Fgithub.com/akram/weegotoschool.git&cartridges[]=php-5.4&cartridges[]=mongodb)
 
 Which is also available by clicking the Red Ribbon from this site: http://akram.github.io/weegotoschool/
 

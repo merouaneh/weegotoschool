@@ -63,12 +63,12 @@
               <label for="cityHome">Ville</label><input id="cityHome" name="cityHome" /><br>
 
               <label for="addressWork">Adresse travail</label>
-              <input id="addressWork" name="addressWork" />
+              <input id="addressWork" name="addressWork" placeholder="Adresse approchée sans n° de rue"/>
               <label for="zipWork">CP</label><input id="zipWork" name="zipWork" />
               <label for="cityWork">Ville</label><input id="cityWork" name="cityWork" /><br>
 
               <label for="addressOther">Autre Adresse</label>
-              <input id="addressOther" name="addressOther  " />
+              <input id="addressOther" name="addressOther" placeholder="Adresse approchée sans n° de rue"/>
               <label for="zipOther">CP</label><input id="zipOther" name="zipOther" />
               <label for="cityOther">Ville</label><input id="cityOther" name="cityOther" /><br>
               <br>

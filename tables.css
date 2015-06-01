@@ -56,20 +56,20 @@
 
 
 .gar-ask-give {
-  background-image: url(images/ask.png), url(images/give.png), url(images/503.png);
+  background-image: url(images/ask.png), url(images/give.png), url(images/802.png);
   background-size: 16px, 16px, 12px;
   background-position: right top, right bottom, left center;
 
 }
 
 .gar-ask {
-  background-image: url(images/ask.png), url(images/503.png);
+  background-image: url(images/ask.png), url(images/802.png);
   background-size: 16px, 12px;
   background-position: right bottom, left center;
 }
 
 .gar-give {
-  background-image: url(images/give.png), url(images/503.png);
+  background-image: url(images/give.png), url(images/802.png);
   background-size: 16px, 12px;
   background-position: right top, left center;
 }
@@ -103,21 +103,21 @@
 
 .vac-ask-give {
   color: transparent; 
-  background-image: url(images/ask.png), url(images/give.png), url(images/94.png);
+  background-image: url(images/ask.png), url(images/give.png), url(images/432.png);
   background-size: 16px, 16px, 12px;
   background-position: right top, right bottom, left center;
 }
 
 .vac-ask {
   color: transparent; 
-  background-image: url(images/ask.png), url(images/94.png);
+  background-image: url(images/ask.png), url(images/432.png);
   background-size: 16px, 12px;
   background-position: right bottom, left center;
 }
 
 .vac-give {
   color: transparent; 
-  background-image: url(images/give.png), url(images/94.png);
+  background-image: url(images/give.png), url(images/432.png);
   background-size: 16px, 12px;
   background-position: right top, left center;
 }

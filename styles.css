@@ -1,8 +1,6 @@
 /**
  *
  */
-
-
 /* debug
 
 $div {
@@ -25,6 +23,96 @@ body {
 label {
   color: rgb(22, 162, 216);
   font-weight: bold;
+}
+
+div#banner, div#footer {
+  background: url(images/theme_header_cars2.png) repeat;
+  background-size: 320px 100px;
+  margin-left: auto;
+  display: block;
+  height:100px;
+
+}
+
+div#form , div.form {
+  padding: 5px 10px 15px 10px; 
+}
+
+div#intro, div#title ,{
+  padding: 5px 10px 5px 10px; 
+}
+
+div#container {
+   width: 820px;
+   box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+   margin-left: auto;
+   margin-right: auto;
+   background: white;
+}
+
+div#map {
+   height:100%;
+   background-image: url(images/static_map.png);
+   background-size: 600px 600px;
+   //margin-left: 15px;
+   height: 500px;
+
+}
+
+h1, h2, h3 {
+  color: rgb(27,165,145);
+  margin: 2px 2px 2px 2px;
+  text-align: left;
+
+}
+
+.column {
+  display: inline-block;
+  width: 700px;
+  text-align: left;
+  background-color: #f3f3f3;
+  border: solid 1px #a1a1a1;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+div#content{
+  text-align: center;
+  //display: inline;
+  background-color: white;
+  //height: 500px;
+  //padding: 5px 30px 5px 15px; 
+
+}
+
+div#left {
+  //width: 600px;
+  vertical-align: top;
+}
+
+div#right {
+ // background-color: white;
+  //width: 200px;
+  table-layout: auto;
+}
+
+div.arabic {
+  direction: rtl;
+}
+
+div.coran {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  direction: rtl;
+  font-size: 1.2em;
+}
+
+div#header {
+  background-color: white;
+  padding-bottom: 10px;
 }
 
 
@@ -66,94 +154,6 @@ vertical-align: middle;
 white-space: nowrap;
 width: 75px;
 }
-
-div#container {
-   width: 820px;
-   box-shadow: 0 10px 10px rgba(0,0,0,0.3);
-   margin-left: auto;
-   margin-right: auto;
-   background: white;
-}
-
-div#map {
-   height:100%;
-   background-image: url(images/static_map.png);
-   background-size: 600px 600px;
-   margin-left: 15px;
-}
-
-h1, h2, h3 {
-  color: rgb(27,165,145);
-  margin: 2px 2px 2px 2px;
-  text-align: left;
-
-}
-
-.column {
-  display: inline-block;
-  text-align: left;
-  height: 500px;
-
-}
-
-
-div#form {
-    padding: 5px 30px 5px 15px; 
-
-
-}
-
-div#content{
-  text-align: center;
-  display: inline;
-  background-color: white;
-  height: 500px;
-  padding: 5px 30px 5px 15px; 
-
-}
-
-div#left {
-  width: 600px;
-  vertical-align: top;
-}
-
-div#right {
-  background-color: white;
-  width: 200px;
-  table-layout: auto;
-}
-
-div.arabic {
-  direction: rtl;
-}
-
-div.coran {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  direction: rtl;
-  font-size: 1.2em;
-}
-
-div#header {
-  background-color: white;
-  padding-bottom: 10px;
-}
-
-div#banner, div#footer {
-  background: url(images/theme_header_cars2.png) repeat;
-  background-size: 320px 100px;
-  margin-left: auto;
-  display: block;
-  height:100px;
-
-}
-
-div#intro, div#title {
-  padding: 5px 10px 5px 10px; 
-}
-
-
 
 
 

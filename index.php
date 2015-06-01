@@ -15,20 +15,25 @@
       <div id="container">
         <div id="header">
         <div id="banner"></div>
-        <div id="title"><h1>Entraide Ecole</h1></div>
-        <div id="intro">
-            السلام عليكم 
-            <br/>
-            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
+        <br>
+        <div class="formLayout">
+          <div id="title"><h1>Entraide Ecole</h1></div>
+          <div id="intro">
+              السلام عليكم 
+              <br/>
+              Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
+          </div>
         </div>
       </div>
 
        <div id="content" class="container">
-        <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
-        <a href="process.php"><h3>Accéder directement aux résultats</h3></a>
         <div id="form">
           <form action="process.php" method="post">
             <div class="formLayout">
+              <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
+              <br>
+              <a href="process.php"><h3>Accéder directement aux résultats</h3></a>
+              <br>
               <label for="name">Vos nom et prénoms</label><input id="name" name="name">
               <label for="parente">Lien de parenté</label>
               <select id="parente" name="parente">

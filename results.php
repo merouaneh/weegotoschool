@@ -5,6 +5,7 @@
         <title>myapp</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
         <link rel="stylesheet" type="text/css" href="tables.css" />
+        <link rel="stylesheet" type="text/css" href="forms.css" />
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Play" />
     </head>
 
@@ -15,22 +16,29 @@
       <div id="container">
         <div id="header">
         <div id="banner"></div>
-        <div id="title"><h1>Entraide Ecole</h1></div>
-        <div id="intro">
-          <!--div id="coran" class="coran arabic"></div><br/><div class="arabic"></div-->
-          <br/>
-          Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
-      </div>
-      <div id="form">
-        <form id="form2" method="get" action="index.php">
-          <input type="submit" name="submit" value="Retour" id="ss-submit" class="jfk-button jfk-button-action ">
-       </form>
+        <br>
+        <div class="formLayout">
+          <div id="title">
+            <?php if( is_set($_REQUEST['success'] ) { ?> 
+            <?php } ?>
+            <h1>Entraide Ecole</h1>
+          </div>
+          <div id="intro">
+              السلام عليكم 
+              <br/>
+             Retrouvez ici les parents des camarades de classes de vos enfants et proposez-leur votre aide.
+          </div>
+          <br>
+          <div id="form">
+            <form id="form2" method="get" action="index.php">
+              <input type="submit" name="submit" value="Retour" id="ss-submit" class="jfk-button jfk-button-action ">
+           </form>
+           <br>
+          </div>
+        </div>
       </div>
 
        <div id="content" class="container">
-        <div id="left" class="column">
-          <div id="map"></div>
-        </div>
         <div id="right" class="column">
           <div name="addresses" class="mytable">
             <div class="column1"></div>
@@ -81,6 +89,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -95,6 +104,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -109,6 +119,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -123,6 +134,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -137,6 +149,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -151,6 +164,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -165,6 +179,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
              
             <div class="myrow">
@@ -180,6 +195,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -194,6 +210,7 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
             <div class="myrow">
               <div class="mycell" name="address" >
@@ -208,8 +225,13 @@
               <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
               <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
               <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity can-give">cC</label></div>
             </div>
           </div>
+
+        </div>
+                <div id="left" class="column">
+          <div id="map"></div>
         </div>
        </div>
        

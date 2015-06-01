@@ -15,15 +15,16 @@ function toggleAll(element) {
     console.log('Toggling all checkboxes for target ' + target); 
 
     var checkboxes = document.getElementsByName(target);
-    if( target.indexOf("[]") > -1 ) {
-        console.log('Elements with name ' + target + ' : ' + checkboxes.length); 
-    } else {
+    var start = 1;
+    if( target.indexOf("[]") < 0 ) {
         checkboxes = document.querySelectorAll("input[value=" + target + "]");
+        start = 0;
     }
-
+    console.log('Elements with name ' + target + ' : ' + checkboxes.length); 
     var checked = !checkboxes[0].checked;
-    for(var i = 0 ; i < checkboxes.length; i++) {
-        checkboxes[i].checked = checked;
+    console.log('All elements will be set to checked= ' + checked); 
+    for(var i = start ; i < checkboxes.length; i++) {
+       checkboxes[i].checked = checked;
     } 
 
 };

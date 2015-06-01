@@ -21,8 +21,8 @@
           <br/>
           Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
       </div>
-        <div id="form">
-          <input type="submit" name="submit" value="Envoyer" id="ss-submit" class="jfk-button jfk-button-action ">
+        <div id="form" method="get" action="index.php">
+          <input type="submit" name="submit" value="Retour" id="ss-submit" class="jfk-button jfk-button-action ">
        </div>
       </div>
 

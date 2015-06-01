@@ -2,6 +2,8 @@
 include 'common.php';
 
 $json = json_encode($_POST);
-echo $json;
+//echo $json;
+
+header('Location: results.php');
 ?>
 

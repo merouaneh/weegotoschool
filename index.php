@@ -4,7 +4,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>myapp</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
-        <link rel="stylesheet" type="text/css" href="tables.css" />
+        <link rel="stylesheet" type="text/css" href="forms.css" />
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Play" />
     </head>
 
@@ -17,207 +17,167 @@
         <div id="banner"></div>
         <div id="title"><h1>Entraide Ecole</h1></div>
         <div id="intro">
-          <!--div id="coran" class="coran arabic"></div><br/><div class="arabic"></div-->
-          <br/>
-          Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
-      </div>
-        <div id="form">
-          <input type="submit" name="submit" value="Envoyer" id="ss-submit" class="jfk-button jfk-button-action ">
-       </div>
+            السلام عليكم 
+            <br/>
+            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
+        </div>
       </div>
 
        <div id="content" class="container">
-        <div id="left" class="column">
-          <div id="map"></div>
-        </div>
-        <div id="right" class="column">
-          <div name="addresses" class="mytable">
-            <div class="column1"></div>
-            <div class="column2"></div>
-            <div class="column3"></div>
-            <div class="column3"></div>
-            <div class="column3"></div>
-            <div class="column3"></div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input name="route" type="checkbox" checked="true" disabled="true" 
-                       value="0" id="route_0"
-                       address="113 avenue Louis Breguet, Villepinte" 
-                       label="&lt;b&gt;Ecole&lt;/b&gt;"/>
-              </div>
-              <div class="mycell"><label for="route_0">Ecole</label></div>
-              <div class="mycell cov" name="covoiturage"><label for="route_1" class="cov"></label></div>
-              <div class="mycell gar" name="garderie"><label for="route_1" class="gar"></label></div>
-              <div class="mycell dev" name="devoirs"><label for="route_1" class="dev"></label></div>
-              <div class="mycell vac" name="vacances"><label for="route_1" class="vac"></label></div>
-              <div class="mycell can" name="cantine"><label for="route_1" class="can"></label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                      value="1" id="route_1"
-                      address="5 avenue Maurice Utrillo, Montmagny" 
-                      label="&lt;b&gt;Oum Esra&lt;/b&gt;"
-                      content = "&lt;i&gt;&lt;br/&gt;Salamalikoum,Je propose d'enmener vos enfants le matin à 8h15 les lundi, mardi, jeudi et vendredi et de recuperer le vendredi à 16h30.&lt;br/&gt;&lt;br/&gt;J'habite montmagny et je peux m'arrêter pour prendre vos enfants sur les villes de Pierrefitte sur seine et de Saint denis (lycée Paul Eluard ou  hopital  de la fontaine. &lt;br/&gt;&lt;br/&gt;J'ai 2 places de disponible à l'arrière et une place à l'avant. Je suis à la recherche d'un co voiturage pour récuperer ma fille à l'ecole à 16h30 et me la ramener à Aulnay (lieu ou je travaille) les lundi, mardi et jeudi et éventuellement me la garder jusqu'a 17H45&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_1">Oum Esra</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-              <div class="mycell" name="cantine"><label for="route_1" class="activity can-ask">cC</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="2" id="route_2"
-                          address="5 avenue Maurice Utrillo, Argenteuil" 
-                          label="&lt;b&gt;Oum Aisse&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_2">Oum Amine</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="3" id="route_3"
-                          address="5 avenue Maurice Utrillo, Villepinte" 
-                          label="&lt;b&gt;Oum Hajer&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_3">Abou Issa</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="4" id="route_4"
-                          address="5 avenue Maurice Utrillo, Villetaneuse" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_4">Oum Hajer</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="5" id="route_5"
-                          address="5 avenue Maurice Utrillo, Villetaneuse" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_5">Oum Salama</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="6" id="route_6"
-                          address="5 avenue Maurice Utrillo, Villetaneuse" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_6">Oum Amel</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="7" id="route_7"
-                          address="5 avenue Maurice Utrillo, Villetaneuse" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_7">Abou Houreira</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="8" id="route_8"
-                          address="5 avenue Maurice Utrillo, Montreuil" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_8">Abou Anas</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-             
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="9" id="route_9"
-                          address="5 avenue Maurice Utrillo, Paris" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_9">Oum Othman</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="10" id="route_10"
-                          address="5 avenue Maurice Utrillo, Chantilly" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_10">Ibn Abbas</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-            <div class="myrow">
-              <div class="mycell" name="address" >
-                <input    name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
-                          value="11" id="route_11"
-                          address="5 avenue Maurice Utrillo, Epinay" 
-                          label="&lt;b&gt;Abou Amel&lt;/b&gt;"
-                          content = "&lt;i&gt;Je peux emmenener 3 enfants, j'ai une voiture 4 places&lt;/i&gt;" />
-              </div>
-              <div class="mycell" name="addressLabel"><label for="route_11">Abou Esra</label></div>
-              <div class="mycell" name="covoiturage"><label for="route_1" class="activity cov-ask-give">cC</label></div>
-              <div class="mycell" name="garderie"><label for="route_1" class="activity gar-give">gG</label></div>
-              <div class="mycell" name="devoirs"><label for="route_1" class="activity dev-ask activity">dD</label></div>
-              <div class="mycell" name="vacances"><label for="route_1" class="activity vac-ask">vV</label></div>
-            </div>
-          </div>
-        </div>
+        <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
+        <a href="process.php"><h3>Accéder directement aux résultats</h3></a>
+        <div id="form">
+          <form action="process.php" method="post">
+            <div class="formLayout">
+              <label for="name">Vos nom et prénoms</label><input id="name" name="name">
+              <label for="parente">Lien de parenté</label>
+              <select id="parente" name="parente">
+                  <option selected disabled hidden value=''></option><option>Mère</option><option>Père</option><option>Grand-Mère</option><option>Grand-Père</option>
+                  <option>Tante maternelle</option><option>Oncle maternel</option><option>Tante paternelle</option><option>Oncle paternel</option>
+                  <option>Voisine ou amie des parents</option><option>Voisin ou amie des parents</option>
+              </select>
+              <br>
+              <label for="email">Adresse e-mail</label><input id="email">
+              <label for="telephone">N° téléphone</label><input id="telephone">
+              <br>
+              <label for="childFirstname">Noms et prénoms des enfants</label><input id="childFirstname" name="childFirstname">
+              <label for="childrenNumber">Nombre d'enfants</label>
+              <select id="childrenNumber" name="childrenNumber">
+                  <option selected disabled hidden value=''></option><option>1</option><option>2</option><option>3</option><option>4</option>
+                  <option>5</option><option>6</option>
+              </select>
+              <br>
+              <label for="childrenGrades">Classes des enfants</label>
+              <label for="PS">PS</label><input id="PS" name="childrenGrades" type="checkbox" />
+              <label for="MS">MS</label><input id="MS" name="childrenGrades" type="checkbox" />
+              <label for="GS">GS</label><input id="GS" name="childrenGrades" type="checkbox" />
+              <label for="CP">CP</label><input id="CP" name="childrenGrades" type="checkbox" />
+              <label for="CE1">CE1</label><input id="CE1" name="childrenGrades" type="checkbox" />
+              <label for="CE2">CE2</label><input id="CE2" name="childrenGrades" type="checkbox" />
+              <label for="CM1">CM1</label><input id="CM1" name="childrenGrades" type="checkbox" />
+              <label for="CM2">CM2</label><input id="CM2" name="childrenGrades" type="checkbox" />
+              <br>
+              <br>
+              <br>
+              <label for="addressHome">Adresse résidence</label>
+              <input id="addressHome" name="addressHome" placeholder="Adresse approchée sans n° de rue"/>
+              <label for="zipHome">CP</label><input id="zipHome" name="zipHome" />
+              <label for="cityHome">Ville</label><input id="cityHome" name="cityHome" /><br>
+
+              <label for="addressWork">Adresse travail</label>
+              <input id="addressWork" name="addressWork" placeholder="Adresse approchée sans n° de rue"/>
+              <label for="zipWork">CP</label><input id="zipWork" name="zipWork" />
+              <label for="cityWork">Ville</label><input id="cityWork" name="cityWork" /><br>
+
+              <label for="addressOther">Autre Adresse</label>
+              <input id="addressOther" name="addressOther" placeholder="Adresse approchée sans n° de rue"/>
+              <label for="zipOther">CP</label><input id="zipOther" name="zipOther" />
+              <label for="cityOther">Ville</label><input id="cityOther" name="cityOther" /><br>
+              <br>
+              <br>
+              <br>
+
+              <label class="generalAction">Cherche de l'aide pour : </label>
+              <label for="Lu" onClick="toggleAll(this);">Lu</label>
+              <label for="Ma" onClick="toggleAll(this);">Ma</label>
+              <label for="Me" onClick="toggleAll(this);">Me</label>
+              <label for="Je" onClick="toggleAll(this);">Je</label>
+              <label for="Ve" onClick="toggleAll(this);">Ve</label>
+              
+              <label class="generalAction">Propose de l'aide pour : </label>
+              <label for="Lu" onClick="toggleAll(this);">Lu</label>
+              <label for="Ma" onClick="toggleAll(this);">Ma</label>
+              <label for="Me" onClick="toggleAll(this);">Me</label>
+              <label for="Je" onClick="toggleAll(this);">Je</label>
+              <label for="Ve" onClick="toggleAll(this);">Ve</label>
+              <br>
+              <label id="chercheCovoiturage" for="chercheCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
+              <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Lu"/>
+              <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Ma"/>
+              <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Me"/>
+              <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Je"/>
+              <input type="checkbox" id="chercheCovoiturage[]" name="chercheCovoiturage[]" value="Ve"/>
+
+              <label id="proposeCovoiturage" for="proposeCovoiturage[]" onClick="toggleAll(this);">Covoiturage/pedibus</label>
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Lu" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Ma" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Me" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Je" />
+              <input type="checkbox" id="proposeCovoiturage[]" name="proposeCovoiturage[]" value="Ve" />
+              <br>
+              <label id="chercheCantine" for="chercheCantine[]" onClick="toggleAll(this);">Cantine</label>
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Lu" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Ma" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Me" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Je" />
+              <input type="checkbox" id="chercheCantine[]" name="chercheCantine[]" value="Ve" />
+
+              <label id="proposeCantine" for="proposeCantine[]" onClick="toggleAll(this);">Cantine</label>
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Lu" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Ma" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Me" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Je" />
+              <input type="checkbox" id="proposeCantine[]" name="proposeCantine[]" value="Ve" />
+              <br>
+              <label id="chercheGarderie" for="chercheGarderie[]" onClick="toggleAll(this);">Garderie</label>
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Lu" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ma" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Me" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Je" />
+              <input type="checkbox" id="chercheGarderie[]" name="chercheGarderie[]" value="Ve" />
+
+              <label id="proposeGarderie" for="proposeGarderie[]" onClick="toggleAll(this);">Garderie</label>
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Lu" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ma" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Me" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Je" />
+              <input type="checkbox" id="proposeGarderie[]" name="proposeGarderie[]" value="Ve" />
+              <br>
+              <label id="chercheDevoirs" for="chercheDevoirs[]" onClick="toggleAll(this);">Devoirs</label>
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Lu" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Ma" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Me" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Je" />
+              <input type="checkbox" id="chercheDevoirs[]" name="chercheDevoirs[]" value="Ve" />
+
+              <label id="proposeDevoirs" for="proposeDevoirs[]" onClick="toggleAll(this);">Devoirs</label>
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Lu" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Ma" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Me" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Je" />
+              <input type="checkbox" id="proposeDevoirs[]" name="proposeDevoirs[]" value="Ve" />
+              <br>
+              <label id="chercheGardeVacances" for="chercheGardeVacances[]" onClick="toggleAll(this);">Vacances</label>
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Lu" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Ma" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Me" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Je" />
+              <input type="checkbox" id="chercheGardeVacances[]" name="chercheGardeVacances[]" value="Ve" />
+
+              <label id="proposeGardeVacances" for="proposeGardeVacances[]" onClick="toggleAll(this);">Vacances</label>
+              <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Lu" />
+              <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Ma" />
+              <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Me" />
+              <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Je" />
+              <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" value="Ve" />
+              <br>
+              <br>
+              <label for="classified">Votre annonce</label>
+              <textarea id="classified" name="classified" cols="80"
+              placeholder="Entrer ici des détails de l'annonce: Par exemple: J'ai une voiture 4 places. Je travaille à Villemombre"></textarea>
+              <br>
+              <br>
+              <br>
+              
+              <br>
+              <label></label><label></label>
+              <label for="submit"></label><input type="submit" id="submit" name="submit" value="Envoyer" id="ss-submit" class="jfk-button jfk-button-action "><br>
+             </div>
+           </form>
        </div>
-       
        <div id="footer">
        </div>
       </div>
     </body>
-    <script type="text/javascript" src="maps.js"></script>
-    <script type="text/javascript" src="init.js"></script>
-    <script type="text/javascript" src="events.js"></script>
 
 </html>

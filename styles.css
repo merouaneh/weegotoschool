@@ -82,9 +82,11 @@ div#map {
    margin-left: 15px;
 }
 
-h1 {
+h1, h2, h3 {
   color: rgb(27,165,145);
-  margin: 5px 5px 5px 5px;
+  margin: 2px 2px 2px 2px;
+  text-align: left;
+
 }
 
 .column {

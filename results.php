@@ -19,8 +19,6 @@
         <br>
         <div class="formLayout">
           <div id="title">
-            <?php if( is_set($_REQUEST['success'] ) { ?> 
-            <?php } ?>
             <h1>Entraide Ecole</h1>
           </div>
           <div id="intro">
@@ -30,8 +28,12 @@
           </div>
           <br>
           <div id="form">
-            <form id="form2" method="get" action="index.php">
+            <?php if( isset($_GET['success'] )) { ?> 
+             <h2>Félicitations votre annonce a été correctement ajoutée</h2>
+            <?php } else { ?>
+              <form id="form2" method="get" action="index.php">
               <input type="submit" name="submit" value="Retour" id="ss-submit" class="jfk-button jfk-button-action ">
+            <?php } ?>
            </form>
            <br>
           </div>
@@ -61,6 +63,37 @@
               <div class="mycell vac" name="vacances"><label for="route_1" class="vac"></label></div>
               <div class="mycell can" name="cantine"><label for="route_1" class="can"></label></div>
             </div>
+<?php 
+include 'common.php';
+$json = json_encode($_POST);
+$decoded_resp = json_decode($json);
+$collection = get_collection(ROUTES_COLLECTION);
+$cursor = $collection->find();
+foreach ( $cursor as $id => $value ) { 
+  $cov = 'cov' . isset( $value['chercheCovoiturage']) ? '-ask' : '' . isset( $value['proposeCovoiturage']) ? '-give' : '' ;
+  $gar = 'gar' . isset( $value['chercheGarderie'])    ? '-ask' : '' . isset( $value['proposeGarderie'])    ? '-give' : '' ;
+  $dev = 'dev' . isset( $value['chercheDevoirs'])      ? '-ask' : '' . isset( $value['proposeDevoirs'])    ? '-give' : '' ;
+  $vac = 'vac' . isset( $value['chercheVacances'])    ? '-ask' : '' . isset( $value['proposeVacances'])    ? '-give' : '' ;
+  $can = 'can' . isset( $value['chercheCantine'])     ? '-ask' : '' . isset( $value['proposeCantine'])     ? '-give' : '' ;
+  ?>
+            <div class="myrow">
+              <div class="mycell" name="address" >
+                <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 
+                      value="1" id="route_1"
+                      address="<?php $value['address'] ?>" 
+                      label="<?php $value['name'] ?>"
+                      content = "<?php $value['classified'] ?>" />
+              </div>
+              <div class="mycell" name="addressLabel"><label for="route_1"><?php $value['address'] ?></label></div>
+              <div class="mycell" name="covoiturage"><label for="route_1" class="activity <?php $value['cov'] ?>">cC</label></div>
+              <div class="mycell" name="garderie"><label for="route_1" class="activity <?php $value['gar'] ?>">gG</label></div>
+              <div class="mycell" name="devoirs"><label for="route_1" class="activity <?php $value['dev'] ?>">dD</label></div>
+              <div class="mycell" name="vacances"><label for="route_1" class="activity <?php $value['vac'] ?>">vV</label></div>
+              <div class="mycell" name="cantine"><label for="route_1" class="activity <?php $value['can'] ?>">cC</label></div>
+            </div>
+<?php  } ?> 
+
+
             <div class="myrow">
               <div class="mycell" name="address" >
                 <input  name="route" type="checkbox" checked="true" onChange="handleChange(this)" 

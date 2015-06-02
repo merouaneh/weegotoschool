@@ -8,22 +8,23 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
   label =  element.getAttribute('data-label');
   //TODO change this by using classes on these labels to format content with CSS
   content = '<i>' + element.getAttribute('data-content') + '</i>';
+  cov = element.getAttribute('data-content');
+  content += '<table><tr><td>' + element.getAttribute('data-content') + '</i>';
 
   myLabel = label + '<br/>' + address + (content != null ? '<br/>' + content : '');
   data.push({ label: myLabel , address: address });
 
-  var letter = String.fromCharCode("A".charCodeAt(0) + i - 1);
+  var letter = getHexavigesimalValue( i );
   var img = document.createElement('img');
   var color = '_green';
 
   if( letter.charCodeAt(0) == "@".charCodeAt(0) ) {
     letter = ' ';
   }
-  if( letter.charCodeAt(0) > "Z".charCodeAt(0) ) {
-    color = '';
-  }
+ // if( letter.charCodeAt(0) > "Z".charCodeAt(0) ) {
+   // color = '';
+ // }
 
- // img.src = 'http://maps.gstatic.com/mapfiles/markers2/circle' + letter + '.png';
   if(i == 0) {
     img.src = 'http://www.google.com/mapfiles/arrow.png'
   }

@@ -35,7 +35,7 @@ div#banner, div#footer {
 }
 
 div#form , div.form {
-  padding: 5px 10px 15px 10px; 
+  padding: 2px 10px 2px 10px; 
 }
 
 div#intro, div#title ,{
@@ -50,13 +50,6 @@ div#container {
    background: white;
 }
 
-div#map {
-   height:100%;
-  /* background-image: url(images/static_map.png);*/
-   background-size: 600px 600px;
-   height: 500px;
-
-}
 
 h1, h2, h3 {
   color: rgb(27,165,145);
@@ -71,28 +64,52 @@ h1, h2, h3 {
 
 .column {
   display: inline-block;
-  width: 700px;
-  text-align: left;
+  /* width: 700px; */
+  //text-align: left;
   background-color: #f3f3f3;
   border: solid 1px #a1a1a1;
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+  /*margin-left: auto;
+  margin-right: auto;*/
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
 }
 
 div#content{
   text-align: center;
   background-color: white;
+  height: 550px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+  border: solid 1px #a1a1a1;
+    padding: 10px;
+
+  width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+
+
 }
 
-div#left {
-  vertical-align: top;
-}
-
-div#right {
+div#master {
   table-layout: auto;
-  height: 200px;
+  overflow-y: scroll;
+  float: none;
+  width: 220  px;
+  height: 500px;
+  float: left;
+}
+
+div#detail {
+  vertical-align: top;
+  float: none;
+  width: 500px;
+}
+
+div#map {
+   height:100%;
+  /* background-image: url(images/static_map.png);*/
+   //background-size: 600px 600px;
+   height: 500px;
+
 }
 
 div.arabic {

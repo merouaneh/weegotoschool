@@ -8,7 +8,9 @@
 .mycell {
   display: table-cell;
   color: black;
+  text-align: left;
 }
+
 .column1 {
   display: table-column;
 }

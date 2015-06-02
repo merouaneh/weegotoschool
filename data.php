@@ -6,6 +6,17 @@
  */
 
 
+function get_html_ask_table($map, $key) {
+
+}
+
+function get_html_give_table($map, $key) {
+}
+
+
+
+
+
 function isChecked($checkboxes,$value)  {
     if(!empty($_POST[$checkboxes])) {
         foreach($_POST[$checkboxes] as $chkval) {
@@ -18,7 +29,8 @@ function isChecked($checkboxes,$value)  {
 }
 
 function checkbox($checkboxes,$value)  {
-   echo "value=\"" . $value . (isChecked($checkboxes,$value) ? "\" checked" : "\"";
+    $checked = isChecked($checkboxes,$value) ? "\" checked" : "\"" ;
+    echo "value=\"" . $value . $checked;
 }
 
 

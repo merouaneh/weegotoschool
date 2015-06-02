@@ -4,10 +4,10 @@ var data  = new Array();
 var checkboxes = document.getElementsByName('route');
 for (var i=0, n=checkboxes.length;i<n;i++) {
   var element = checkboxes[i];
-  address = element.getAttribute('address');
-  label =  element.getAttribute('label');
+  address = element.getAttribute('data-address');
+  label =  element.getAttribute('data-label');
   //TODO change this by using classes on these labels to format content with CSS
-  content = '<i>' + element.getAttribute('content') + '</i>';
+  content = '<i>' + element.getAttribute('data-content') + '</i>';
 
   myLabel = label + '<br/>' + address + (content != null ? '<br/>' + content : '');
   data.push({ label: myLabel , address: address });

@@ -4,6 +4,26 @@
  * Removes the first characters of a String until the space char, if the first caracter is a digit.
  * The string is then replaced in $map under the key $key.
  */
+
+
+function isChecked($checkboxes,$value)  {
+    if(!empty($_POST[$checkboxes])) {
+        foreach($_POST[$checkboxes] as $chkval) {
+            if($chkval == $value) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function checkbox($checkboxes,$value)  {
+   echo "value=\"" . $value . (isChecked($checkboxes,$value) ? "\" checked" : "\"";
+}
+
+
+
+
 function obfuscateAddress($map, $key) {
     $map[$key] = s_obfuscateAddress($map[$key]);
 }

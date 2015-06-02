@@ -2,7 +2,7 @@
 function handleChange(element) {
     index = element.value;
     route = routes[index];
-    console.log('Handling checked:' +element.checked+' for index' +index+ ' route is : ' + route); 
+    console.log('Handling checked:' + element.checked + ' for index' +index+ ' route is : ' + route); 
 
     if( route != null ) {
         route.setMap(element.checked ? map : null );
@@ -26,5 +26,4 @@ function toggleAll(element) {
     for(var i = start ; i < checkboxes.length; i++) {
        checkboxes[i].checked = checked;
     } 
-
 };

@@ -52,9 +52,8 @@ div#container {
 
 div#map {
    height:100%;
-   background-image: url(images/static_map.png);
+  /* background-image: url(images/static_map.png);*/
    background-size: 600px 600px;
-   //margin-left: 15px;
    height: 500px;
 
 }
@@ -80,22 +79,16 @@ h1, h2, h3 {
 
 div#content{
   text-align: center;
-  //display: inline;
   background-color: white;
-  //height: 500px;
-  //padding: 5px 30px 5px 15px; 
-
 }
 
 div#left {
-  //width: 600px;
   vertical-align: top;
 }
 
 div#right {
- // background-color: white;
-  //width: 200px;
   table-layout: auto;
+  height: 200px;
 }
 
 div.arabic {

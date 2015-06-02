@@ -40,6 +40,10 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $classified = $result['value'];
     $errors['classified'] = $result['error'];
 
+    $result = validateMandatory('childrenGrades');
+    $childrenGrades = $result['value'];
+    $errors['childrenGrades'] = $result['error'];
+
     $errors = array_filter($errors);
     if (empty($errors)) {
       submit();
@@ -107,14 +111,22 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
             </select>
             <br>
             <label for="childrenGrades">Classes des enfants</label>
-            <label for="PS">PS</label><input   type="checkbox" id="PS"  value="PS"  name="childrenGrades[]"  />
-            <label for="MS">MS</label><input   type="checkbox" id="MS"  value="MS"  name="childrenGrades[]" />
-            <label for="GS">GS</label><input   type="checkbox" id="GS"  value="GS"  name="childrenGrades[]"  />
-            <label for="CP">CP</label><input   type="checkbox" id="CP"  value="CP"  name="childrenGrades[]" />
-            <label for="CE1">CE1</label><input type="checkbox" id="CE1" value="CE1" name="childrenGrades[]" />
-            <label for="CE2">CE2</label><input type="checkbox" id="CE2" value="CE2" name="childrenGrades[]"  />
-            <label for="CM1">CM1</label><input type="checkbox" id="CM1" value="CM1" name="childrenGrades[]"  />
-            <label for="CM2">CM2</label><input type="checkbox" id="CM2" value="CM2" name="childrenGrades[]"  />
+            <label for="PS">PS</label><input   type="checkbox" name="childrenGrades[]" id="PS"  <?php checkbox('childrenGrades', 'PS'); ?> 
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="MS">MS</label><input   type="checkbox" name="childrenGrades[]" id="MS"  <?php checkbox('childrenGrades', 'MS'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="GS">GS</label><input   type="checkbox" name="childrenGrades[]" id="GS"  <?php checkbox('childrenGrades', 'GS'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="CP">CP</label><input   type="checkbox" name="childrenGrades[]" id="CP"  <?php checkbox('childrenGrades', 'CP'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="CE1">CE1</label><input type="checkbox" name="childrenGrades[]" id="CE1" <?php checkbox('childrenGrades', 'CE1'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="CE2">CE2</label><input type="checkbox" name="childrenGrades[]" id="CE2" <?php checkbox('childrenGrades', 'CE2'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="CM1">CM1</label><input type="checkbox" name="childrenGrades[]" id="CM1" <?php checkbox('childrenGrades', 'CM1'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
+            <label for="CM2">CM2</label><input type="checkbox" name="childrenGrades[]" id="CM2" <?php checkbox('childrenGrades', 'CM2'); ?>  
+                                               class="<?php echo $errors['childrenGrades'] ?>" />
             <br>
             <br>
             <br>

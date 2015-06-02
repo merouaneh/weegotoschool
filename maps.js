@@ -63,20 +63,33 @@ AddressComponent.prototype.extractAddressComponent = function(result) {
   }
 }
 
+function getHexavigesimalValue(number) {
+  var base = 26;
+  var converted = "";
+  var alpha = "A".charCodeAt(0);
+  var offset = 0;
+  do  {
+      var remainder = number % base;
+      converted = String.fromCharCode( alpha + remainder - offset) + converted;
+      number = Math.floor((number - remainder) / base);
+      offset = 1;
+  } while (number > 0);
+
+  return converted;
+}
+
 function createMarker(address, label, lat, lng) {
   var contentString = label;
   var latLng = new google.maps.LatLng(lat,lng);
-  var letter = String.fromCharCode("A".charCodeAt(0) + locations.length - 1);
-  var icon_prefix = 'http://www.google.com/mapfiles/marker_green';
-  if( locations.length == 0) {
-    letter = '';  
-    icon_prefix = 'http://www.google.com/mapfiles/arrow';
-
+  var letter = '';  
+  var icon = 'http://www.google.com/mapfiles/arrow.png';
+   if( locations.length > 1) {
+    letter = getHexavigesimalValue( locations.length - 1);
+    icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + letter + '|66bb4a';
   }
-  //icon_prefix = 'marker_green';
-  var marker = new google.maps.Marker({ map: map, position: latLng, icon: icon_prefix + letter + '.png', animation: google.maps.Animation.NONE });
+  var marker = new google.maps.Marker({ map: map, position: latLng, icon: icon, animation: google.maps.Animation.NONE });
 
-  locations.push({ label: label, address: address, latLng: latLng });
+  locations.push({ label: label, address: address, latLng: latLng , draggable:true});
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent(contentString); 
     infowindow.open(map,marker);

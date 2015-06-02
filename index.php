@@ -107,14 +107,14 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
             </select>
             <br>
             <label for="childrenGrades">Classes des enfants</label>
-            <label for="PS">PS</label><input id="PS" name="childrenGrades" type="checkbox" />
-            <label for="MS">MS</label><input id="MS" name="childrenGrades" type="checkbox" />
-            <label for="GS">GS</label><input id="GS" name="childrenGrades" type="checkbox" />
-            <label for="CP">CP</label><input id="CP" name="childrenGrades" type="checkbox" />
-            <label for="CE1">CE1</label><input id="CE1" name="childrenGrades" type="checkbox" />
-            <label for="CE2">CE2</label><input id="CE2" name="childrenGrades" type="checkbox" />
-            <label for="CM1">CM1</label><input id="CM1" name="childrenGrades" type="checkbox" />
-            <label for="CM2">CM2</label><input id="CM2" name="childrenGrades" type="checkbox" />
+            <label for="PS">PS</label><input   type="checkbox" id="PS"  value="PS"  name="childrenGrades[]"  />
+            <label for="MS">MS</label><input   type="checkbox" id="MS"  value="MS"  name="childrenGrades[]" />
+            <label for="GS">GS</label><input   type="checkbox" id="GS"  value="GS"  name="childrenGrades[]"  />
+            <label for="CP">CP</label><input   type="checkbox" id="CP"  value="CP"  name="childrenGrades[]" />
+            <label for="CE1">CE1</label><input type="checkbox" id="CE1" value="CE1" name="childrenGrades[]" />
+            <label for="CE2">CE2</label><input type="checkbox" id="CE2" value="CE2" name="childrenGrades[]"  />
+            <label for="CM1">CM1</label><input type="checkbox" id="CM1" value="CM1" name="childrenGrades[]"  />
+            <label for="CM2">CM2</label><input type="checkbox" id="CM2" value="CM2" name="childrenGrades[]"  />
             <br>
             <br>
             <br>

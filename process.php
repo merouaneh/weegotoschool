@@ -9,7 +9,6 @@ function submit() {
     $_POST['addressWork'] = s_obfuscateAddress($_POST['addressWork'] );
     $_POST['addressOther'] = s_obfuscateAddress($_POST['addressOther'] );
 
-
     $json = json_encode($_POST);
     $decoded_resp = json_decode($json);
 

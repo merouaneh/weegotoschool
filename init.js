@@ -16,23 +16,15 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
 
   var letter = getHexavigesimalValue( i );
   var img = document.createElement('img');
-  var color = '_green';
-
   if( letter.charCodeAt(0) == "@".charCodeAt(0) ) {
     letter = ' ';
   }
- // if( letter.charCodeAt(0) > "Z".charCodeAt(0) ) {
-   // color = '';
- // }
-
   if(i == 0) {
     img.src = 'http://www.google.com/mapfiles/arrow.png'
   }
-  //element.parentNode.insertBefore(img, element);
   var div = document.createElement('div');
   div.className = 'mycell';
   var rowDiv = element.parentNode.parentNode.parentNode;
-  //rowDiv.insertBefore(div, element.parentNode.parentNode);
 
 
   var label = document.createElement('label');

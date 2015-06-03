@@ -83,7 +83,7 @@ function createMarker(address, label, lat, lng) {
   var latLng = new google.maps.LatLng(lat,lng);
   var letter = '';  
   var icon = 'http://www.google.com/mapfiles/arrow.png';
-   if( locations.length > 1) {
+   if( locations.length > 0) {
     letter = getHexavigesimalValue( locations.length - 1);
     icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + letter + '|66bb4a';
   }

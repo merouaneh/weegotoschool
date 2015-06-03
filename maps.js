@@ -82,14 +82,12 @@ function createMarker(address, label, lat, lng) {
   var contentString = label;
   var latLng = new google.maps.LatLng(lat,lng);
   var letter = '';  
-  var icon_prefix = 'http://www.google.com/mapfiles/arrow';
+  var icon = 'http://www.google.com/mapfiles/arrow.png';
    if( locations.length > 1) {
-    icon_prefix = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=';
     letter = getHexavigesimalValue( locations.length - 1);
+    icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + letter + '|66bb4a';
   }
-
-  //icon_prefix = 'marker_green';
-  var marker = new google.maps.Marker({ map: map, position: latLng, icon: icon_prefix + letter + '|66bb4a', animation: google.maps.Animation.NONE });
+  var marker = new google.maps.Marker({ map: map, position: latLng, icon: icon, animation: google.maps.Animation.NONE });
 
   locations.push({ label: label, address: address, latLng: latLng , draggable:true});
   google.maps.event.addListener(marker, 'click', function() {

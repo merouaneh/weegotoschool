@@ -6,14 +6,12 @@
  */
 
 
-function get_html_ask_table($map, $key) {
 
+function get_route($id) {
+    $collection = get_collection(ROUTES_COLLECTION);
+    $object = $collection->findOne(array('_id' =>  new MongoId($id) ));
+    return $object;
 }
-
-function get_html_give_table($map, $key) {
-}
-
-
 
 
 
@@ -33,8 +31,57 @@ function checkbox($checkboxes,$value)  {
     echo "value=\"" . $value . $checked;
 }
 
+function active($checkboxes,$value)  {
+    echo  isChecked($checkboxes,$value)  ? "active" : "";
+}
+
+function get_config($param) {
+    $collection = get_collection(CONFIG_COLLECTION);
+    $cursor = $collection->distinct($param);
+    $result = "";
+    foreach ( $cursor as $value ) {
+        if($result != "" ) {
+            $result = $result . ',';
+        }
+        $result = $result . $value;
+    }
+    return $result;
+}
 
 
+function get_select_options_for_fiels($input, $fields) {
+    $collection = get_collection(ROUTES_COLLECTION);
+    $submitted_values = $_POST[$input];
+    $empty = empty($submitted_values);
+    $posted = ( isset($submitted_values) && !$empty );
+    $search = array();
+    foreach ( $fields as $field ) {
+        $cursor = $collection->distinct($field);
+        foreach ( $cursor as $value ) {
+            $value = ucfirst(strtolower($value));
+            $selected = ( !$posted || $empty || ( $posted && (in_array($value, $submitted_values) )) ? ' selected="selected" ' : ''); 
+            if( $value != '' && !array_search(strtolower($value), array_map('strtolower', $search)) ) {
+                array_push($search, $value);
+                echo '<option' . $selected. ' value="' .$value. '">' .$value. '</option>';
+            }
+        }
+    }
+}
+
+function get_select_options($input, $field) {
+    $collection = get_collection(ROUTES_COLLECTION);
+    $cursor = $collection->distinct($field);
+ 
+    $submitted_values = $_POST[$input];
+    $empty = empty($submitted_values);
+    $posted = ( isset($submitted_values) && !$empty );
+    foreach ( $cursor as $value ) {
+        $selected = ( !$posted || $empty || ( $posted && (in_array($value, $submitted_values) )) ? ' selected="selected" ' : ''); 
+        if( $value != '' ) {
+         echo '<option' . $selected. ' value="' .$value. '">' .$value. '</option>';
+        }
+    }
+}
 
 function obfuscateAddress($map, $key) {
     $map[$key] = s_obfuscateAddress($map[$key]);

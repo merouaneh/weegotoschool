@@ -2,6 +2,7 @@
 
   define("OPENSHIFT_DB",      "covoiturage");
   define("ROUTES_COLLECTION", "routes");
+  define("CONFIG_COLLECTION", "config");
 
   function is_option_set($opts) {
      foreach ($opts as $k => $v) {
@@ -56,3 +57,5 @@
   }
 
 ?>
+
+

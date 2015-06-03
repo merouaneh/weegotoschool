@@ -114,8 +114,8 @@ function createMarker(address, label, lat, lng) {
           var leg = response.routes[ 0 ].legs[ 0 ];
       //  makeMarker( leg.start_location, icons.start, "title" );
       // makeMarker( leg.end_location, icons.end, 'title' );          
-      } else {
-          alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
-      }
+      } // else {
+         // alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
+      //}
   });
 }

@@ -14,18 +14,12 @@ for (var i=0, n=checkboxes.length;i<n;i++) {
   myLabel = label + '<br/>' + address + (content != null ? '<br/>' + content : '');
   data.push({ label: myLabel , address: address });
 
-  var letter = getHexavigesimalValue( i );
+  var letter = getHexavigesimalValue( i - 1 );
   var img = document.createElement('img');
   if( letter.charCodeAt(0) == "@".charCodeAt(0) ) {
     letter = ' ';
   }
-<<<<<<< HEAD
-=======
- // if( letter.charCodeAt(0) > "Z".charCodeAt(0) ) {
-   // color = '';
- // }
 
->>>>>>> 1539ed35d3e91a3fe2793a7079c7dc296aafe4f9
   if(i == 0) {
     img.src = 'http://www.google.com/mapfiles/arrow.png'
   }

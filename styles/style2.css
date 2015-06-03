@@ -1,0 +1,21 @@
+
+span.slm{
+  display: block;
+}
+.or{
+  height: 70px;
+  border: 1px solid  #f2f2f2;
+  border-radius: 50%;
+  width: 70px;
+  display: block;
+  line-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.btn span.glyphicon {         
+  opacity: 0;       
+}
+.btn.active span.glyphicon {        
+  opacity: 1;       
+}

@@ -3,7 +3,14 @@
 
 <?php include 'process.php';
 
-$name = $childFirstname = $telephone = $email = $addressHome =  $cityHome = $cityZip = $classified = "";
+$name = '';
+$childFirstname =  '';
+$telephone =  '';
+$email =  '';
+$addressHome =   '';
+$cityHome =  '';
+$cityZip =  '';
+$classified = '';
 
 if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $errors  = array();
@@ -23,7 +30,7 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $result = validateMandatory('email');
     $email = $result['value'];
     $errors['email'] = $result['error'];
-
+    
     $result = validateMandatory('addressHome');
     $addressHome = $result['value'];
     $errors['addressHome'] = $result['error'];
@@ -49,63 +56,73 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
       submit();
     }
 }
+$url = htmlspecialchars(get_config('url'));
+
 ?>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <title>myapp</title>
-      <link rel="stylesheet" type="text/css" href="styles.css" />
-      <link rel="stylesheet" type="text/css" href="forms.css" />
+      <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+      <link rel="stylesheet" type="text/css" href="styles/forms.css" />
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Play" />
   </head>
 
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
-  <script type="text/javascript" src="events.js"></script>
+  <script type="text/javascript" src="scripts/events.js"></script>
 
   <body>
     <div id="container">
       <div id="header">
       <div id="banner"></div>
       <br>
-      <div class="formLayout">
-        <div id="title"><h1>Entraide Ecole</h1></div>
+      <div class="message">
+        <div id="title">
+            <h1><a href="<?php echo $url ?>"><?php echo $url ?></a></h1>
+            <h1>Entraide Ecole</h1>
+            <b>En cas de problème de connexion, envoyez un mail à : <a href="mailto:<?php echo get_config('email')?>"><?php echo get_config('email')?></a></b>
+        </div>
         <div id="intro">
             السلام عليكم 
             <br/>
             Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
+            <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
         </div>
       </div>
     </div>
 
      <div id="content" class="container">
       <div id="form">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
           <div class="formLayout">
             <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
+            <?php if (!empty($errors)) { ?>
+            <h2><div class="error">Complétez tous champs afin de valider votre annonce</div></h2>
+            <?php } ?>
             <br>
-            <a href="results.php"><h3>Accéder directement aux résultats</h3></a>
+            <h3><a href="results2.php">Accéder directement aux résultats</a></h3>
             <br>
-            <label for="name">Vos nom et prénoms</label>
+            <label  class="my myForm" for="name">Vos nom et prénoms</label>
             <input id="name" name="name" class="<?php echo $errors['name'] ?>" value="<?php echo $name ?>" placeholder="Obligatoire" />
-            <label for="parente">Lien de parenté</label>
+            <label class="my myForm" for="parente">Lien de parenté</label>
             <select id="parente" name="parente">
                 <option>Mère</option><option>Père</option><option>Grand-Mère</option><option>Grand-Père</option>
                 <option>Tante maternelle</option><option>Oncle maternel</option><option>Tante paternelle</option><option>Oncle paternel</option>
                 <option>Voisine ou amie des parents</option><option>Voisin ou amie des parents</option>
             </select>
             <br>
-            <label for="email">Adresse e-mail</label>
+            <label  class="my myForm" for="email">Adresse e-mail</label>
             <input  id="email" name="email" class="<?php echo $errors['email'] ?>" 
                     value="<?php echo $email ?>" placeholder="Obligatoire" />
 
-            <label for="telephone">N° téléphone</label>
+            <label  class="my myForm" for="telephone">N° téléphone</label>
             <input id="telephone" name="telephone" class="<?php echo $errors['telephone'] ?>" 
                     value="<?php echo $telephone ?>" placeholder="Obligatoire" />
             <br>
-            <label for="childFirstname">Noms et prénoms des enfants</label>
+            <label  class="my myForm" for="childFirstname">Noms et prénoms des enfants</label>
             <input id="childFirstname" name="childFirstname" class="<?php echo $errors['childFirstname'] ?>" 
                    value="<?php echo $childFirstname ?>" placeholder="Obligatoire" />
 
-            <label for="childrenNumber">Nombre d'enfants</label>
+            <label  class="my myForm" for="childrenNumber">Nombre d'enfants</label>
             <select id="childrenNumber" name="childrenNumber">
                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
             </select>
@@ -130,7 +147,7 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
             <br>
             <br>
             <br>
-            <label for="addressHome">Adresse résidence</label>
+            <label  class="my myForm" for="addressHome">Adresse résidence</label>
             <input id="addressHome" name="addressHome" placeholder="Adresse approchée sans n° de rue" 
                       value="<?php echo $addressHome ?>" class="<?php echo $errors['addressHome'] ?>"  />
 
@@ -143,12 +160,12 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
                    value="<?php echo $cityHome ?>" class="<?php echo $errors['cityHome'] ?>"  />
             <br>
 
-            <label for="addressWork">Adresse travail</label>
+            <label  class="my myForm" for="addressWork">Adresse travail</label>
             <input id="addressWork" name="addressWork" placeholder="Adresse approchée sans n° de rue"/>
             <label for="zipWork">CP</label><input id="zipWork" name="zipWork" />
             <label for="cityWork">Ville</label><input id="cityWork" name="cityWork" /><br>
 
-            <label for="addressOther">Autre Adresse</label>
+            <label  class="my myForm" for="addressOther">Autre Adresse</label>
             <input id="addressOther" name="addressOther" placeholder="Adresse approchée sans n° de rue"/>
             <label for="zipOther">CP</label><input id="zipOther" name="zipOther" />
             <label for="cityOther">Ville</label><input id="cityOther" name="cityOther" /><br>
@@ -156,14 +173,14 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
             <br>
             <br>
 
-            <label class="generalAction">Cherche de l'aide pour : </label>
+            <label  class="my myForm" class="generalAction">Cherche de l'aide pour : </label>
             <label for="Lu" onClick="toggleAll(this);">Lu</label>
             <label for="Ma" onClick="toggleAll(this);">Ma</label>
             <label for="Me" onClick="toggleAll(this);">Me</label>
             <label for="Je" onClick="toggleAll(this);">Je</label>
             <label for="Ve" onClick="toggleAll(this);">Ve</label>
             
-            <label class="generalAction">Propose de l'aide pour : </label>
+            <label  class="my myForm" class="generalAction">Propose de l'aide pour : </label>
             <label for="Lu" onClick="toggleAll(this);">Lu</label>
             <label for="Ma" onClick="toggleAll(this);">Ma</label>
             <label for="Me" onClick="toggleAll(this);">Me</label>
@@ -241,18 +258,20 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="checkbox" id="proposeGardeVacances[]" name="proposeGardeVacances[]" <?php checkbox('proposeGardeVacances', 'Ve'); ?> />
             <br>
             <br>
-            <label for="classified">Votre annonce</label>
+            <label class="my myForm" for="classified">Votre annonce</label>
             <textarea id="classified" name="classified" cols="80" class="<?php echo $errors['classified'] ?>" 
                       placeholder="Entrer ici des détails de l'annonce: Par exemple: J'ai une voiture 4 places. Je travaille à Villemomble"><?php echo $classified ?></textarea>
-            <br>
-            <br>
-            <br>
             
+            <br>
+            <br>
+            <br>
+            </div>
+           
             <br>
             <label></label><label></label>
             <label for="submit"></label><input type="submit" id="submit" name="submit" value="Envoyer" id="ss-submit" class="jfk-button jfk-button-action "><br>
-           </div>
          </form>
+        </div>
      </div>
      <div id="footer">
      </div>

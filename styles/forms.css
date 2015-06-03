@@ -1,0 +1,205 @@
+
+.formLayout , #formLayout{
+    background-color: #f3f3f3;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+
+}
+
+div.error { color: red; }
+
+.message {
+    background-color: #f3f3f3;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+
+}
+
+label.my {
+    text-align: right;
+    padding-right: 10px;
+}
+
+label.myForm {
+    display: block;
+    width: 150px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+.formLayout label[id=covoiturage] { background-image: url(../images/1294.png), url(../images/1294.png);}
+.formLayout label[id=cantine] { background-image: url(../images/493.png);}
+.formLayout label[id=garderie] { background-image: url(../images/802.png);}
+.formLayout label[id=devoirs] { background-image: url(../images/1018.png);}
+.formLayout label[id=gardeVacances] { background-image: url(../images/432.png);}
+.formLayout label[id=propose] { background-image: url(../images/give.png);}
+.formLayout label[id=cherche] { background-image: url(../images/ask.png);}
+
+
+.formLayout label[for=recherche],  .formLayout label[for=propose] , .formLayout label[for=childrenGrades]{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.formLayout label[for=recherche],  .formLayout label[for=propose],
+.formLayout label[for=childrenGrades], .formLayout input, .formLayout select {
+    display: block;
+    width: 150px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.formLayout textarea {
+    display: block;
+    width: 450px;
+    height: 150px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.formLayout input[type=checkbox] {
+    display: block;
+    width: 15px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+
+
+.formLayout label[id=covoiturage] , .formLayout label[id=cantine] , .formLayout label[id=garderie] , 
+.formLayout label[id=devoirs] , .formLayout label[id=gardeVacances]  {
+    text-align: right;
+    padding-right: 10px;
+    display: block;
+    width: 75px;
+    float: left;
+    margin-bottom: 10px;
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, right center;
+    padding-right: 24px;
+    margin-right: 4px;
+    background-size: 16px, 16px;
+
+}
+
+.formLayout label[id=proposeCovoiturage] , .formLayout label[id=chercheCovoiturage] , 
+.formLayout label[id=proposeCantine] , .formLayout label[id=chercheCantine] , 
+.formLayout label[id=proposeGarderie] , .formLayout label[id=chercheGarderie] , 
+.formLayout label[id=proposeDevoirs] , .formLayout label[id=chercheDevoirs] , 
+.formLayout label[id=proposeGardeVacances] , .formLayout label[id=chercheGardeVacances] {
+    text-align: right;
+    padding-right: 10px;
+    display: block;
+    width: 150px;
+    float: left;
+    margin-bottom: 10px;
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, right center;
+    padding-right: 24px;
+    margin-right: 4px;
+    background-size: 16px, 16px;
+}
+
+
+
+.formLayout label[id=proposeCovoiturage] {background-image: url(../images/give.png), url(../images/1294.png);}
+.formLayout label[id=proposeCantine]  {background-image: url(../images/give.png), url(../images/493.png);}
+.formLayout label[id=proposeGarderie] {background-image: url(../images/give.png), url(../images/802.png);}
+.formLayout label[id=proposeDevoirs] {background-image: url(../images/give.png), url(../images/1018.png);}
+.formLayout label[id=proposeGardeVacances] {background-image: url(../images/give.png), url(../images/432.png);}
+
+
+.formLayout label[id=chercheCovoiturage] {background-image: url(../images/ask.png), url(../images/1294.png);}
+.formLayout label[id=chercheCantine]  {background-image: url(../images/ask.png), url(../images/493.png);}
+.formLayout label[id=chercheGarderie] {background-image: url(../images/ask.png), url(../images/802.png);}
+.formLayout label[id=chercheDevoirs] {background-image: url(../images/ask.png), url(../images/1018.png);}
+.formLayout label[id=chercheGardeVacances] {background-image: url(../images/ask.png), url(../images/432.png);}
+
+
+label.generalAction {
+    padding-right: 26px; 
+}
+
+.formLayout input[id=zip], .formLayout input[id=zipHome], .formLayout input[id=zipWork] ,  .formLayout input[id=zipOther]   {
+    display: block;
+    width: 40px;
+    float: left;
+    margin: 0px 0px 0px 10px;
+}
+
+.formLayout input[id=city], .formLayout input[id=cityHome] , .formLayout input[id=cityWork] , .formLayout input[id=cityOther] {
+    display: block;
+    float: left;
+    margin: 0px 0px 0px 10px; 
+
+}
+
+.formLayout label[for=zip]     , .formLayout label[for=city],
+.formLayout label[for=zipHome] , .formLayout label[for=cityHome],
+.formLayout label[for=zipWork] , .formLayout label[for=cityWork],
+.formLayout label[for=zipOther], .formLayout label[for=cityOther] {
+    text-align: right;
+    padding-right: 10px;
+    display: block;
+    width: 150px;
+    float: left;
+    margin-bottom: 10px;
+    width: 35px;
+    padding: 0px 0px 0px 0px;
+
+}
+
+
+.formLayout label[for=PS], .formLayout label[for=MS],.formLayout label[for=GS],.formLayout label[for=CP],
+.formLayout label[for=CE1],.formLayout label[for=CE2],.formLayout label[for=CM1],.formLayout label[for=CM2],
+.formLayout label[for=Lu],.formLayout label[for=Ma],.formLayout label[for=Me],.formLayout label[for=Je], .formLayout label[for=Ve] {
+    text-align: right;
+    padding-right: 10px;
+    display: block;
+    width: 150px;
+    float: left;
+    margin-bottom: 10px;
+
+    width: 15px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 10px 0px 0px;
+}
+
+br {
+    clear: left;
+}
+
+
+input[type="text"]:disabled {
+    border: none;
+    background: transparent;
+    color: #000;
+}
+
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.7em;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.7em;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 0.7em;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.7em;
+}
+
+
+
+
+

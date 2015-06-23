@@ -3,6 +3,7 @@
   define("OPENSHIFT_DB",      "covoiturage");
   define("ROUTES_COLLECTION", "routes");
   define("CONFIG_COLLECTION", "config");
+  define("USERS_COLLECTION", "users");
 
   function is_option_set($opts) {
      foreach ($opts as $k => $v) {
@@ -12,6 +13,17 @@
      }
 
      return false;
+  }
+
+  function randomPassword() {
+    $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
+    $pass = array(); //remember to declare $pass as an array
+    $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+    for ($i = 0; $i < 8; $i++) {
+        $n = rand(0, $alphaLength);
+        $pass[] = $alphabet[$n];
+    }
+    return implode($pass); //turn the array into a string
   }
 
   function get_option_value($opts) {

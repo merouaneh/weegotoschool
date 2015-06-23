@@ -5,14 +5,46 @@
  * The string is then replaced in $map under the key $key.
  */
 
+function get_routes( $cities) {
 
+    $collection = get_collection(ROUTES_COLLECTION);
+    $submitted_cities = $_POST['cities'];
+    $empty = empty($submitted_cities);
+    $posted = ( isset($submitted_cities) && !$empty );
+    $cities_array = implode("','", $cities);
+    $cursor = "";
+    if( $posted ) {
+    // $query = array ( '$or' => array ( 'cityHome' =>  array (  '$in' =>  $cities,  ), ) ;
+     $query = array ( '$or' => array ( 0 => array ( 'cityWork'  => array ( '$in' => $cities, ),  ),
+                                       1 => array ( 'cityHome'  => array ( '$in' => $cities, ),  ),
+                                       2 => array ( 'cityOther' => array ( '$in' => $cities, ),  ),
+                                     ),
+                    ); 
+     $cursor = $collection->find($query);
+    } else {
+     $cursor = $collection->find();
+    }
+    return $cursor;
+} 
+
+
+function user_exists($username) {
+    $collection = get_collection(USERS_COLLECTION);
+    $object = $collection->findOne( array('username' =>  $username ));
+    return $object['username'];
+}
+
+function get_user($username, $password) {
+    $collection = get_collection(USERS_COLLECTION);
+    $object = $collection->findOne( array('username' =>  $username ,  'password' => $password,));
+    return $object['username'];
+}
 
 function get_route($id) {
     $collection = get_collection(ROUTES_COLLECTION);
     $object = $collection->findOne(array('_id' =>  new MongoId($id) ));
     return $object;
 }
-
 
 
 function isChecked($checkboxes,$value)  {

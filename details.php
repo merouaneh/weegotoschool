@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<?php include 'process.php';
-
+<?php 
+session_start();
+/*if (!isset($_SESSION['auth']) || $_SESSION['auth'] != 1) {
+   header('Location: login.php?url=details.php' );
+   exit();
+}
+*/
+include 'process.php';
 if ( $_SERVER["REQUEST_METHOD"] == "GET") {
     $id = $_GET["id"];
     $result = get_route($id);
@@ -14,6 +20,31 @@ if ( $_SERVER["REQUEST_METHOD"] == "GET") {
     $cityHome =  $result['cityHome'];
     $cityZip =  $result['cityZip'];
     $classified = $result['classified'];
+    $childrenGrades = $result['childrenGrades'];
+
+    $chercheCovoiturage = $result['chercheCovoiturage'];
+    $chercheCantine = $result['chercheCantine'];
+    $chercheDevoirs = $result['chercheDevoirs'];
+    $chercheGardeVacances = $result['chercheGardeVacances'];
+    $chercheGarderie = $result['chercheGarderie'];
+
+    $proposeCovoiturage = $result['proposeCovoiturage'];
+    $proposeCantine = $result['proposeCantine'];
+    $proposeDevoirs = $result['proposeDevoirs'];
+    $proposeGardeVacances = $result['proposeGardeVacances'];
+    $proposeGarderie = $result['proposeGarderie'];
+
+    $_POST['chercheCovoiturage'] = $chercheCovoiturage;
+    $_POST['chercheCantine'] = $chercheCantine;
+    $_POST['chercheDevoirs'] = $chercheDevoirs;
+    $_POST['chercheGardeVacances'] = $chercheGardeVacances;
+    $_POST['chercheGarderie'] = $chercheGarderie;
+
+    $_POST['proposeCovoiturage'] = $proposeCovoiturage;
+    $_POST['proposeCantine'] = $proposeCantine;
+    $_POST['proposeDevoirs'] = $proposeDevoirs;
+    $_POST['proposeGardeVacances'] = $proposeGardeVacances;
+    $_POST['proposeGarderie'] = $proposeGarderie;
 
 }
 $url = htmlspecialchars(get_config('url'));
@@ -41,10 +72,10 @@ $url = htmlspecialchars(get_config('url'));
             <b>En cas de problème de connexion, envoyez un mail à : <a href="mailto:<?php echo get_config('email')?>"><?php echo get_config('email')?></a></b>
         </div>
         <div id="intro">
-            السلام عليكم 
-            <br/>
-            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
-            <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
+            <form id="form2" method="get" action="index.php">
+              <input type="submit" name="submit" value="Retour" id="ss-submit" class="jfk-button jfk-button-action ">
+              <a href="results.php"><input type="button" name="carte" value="Carte" id="ss-submit-map" class="jfk-button jfk-button-action" ></a>
+            </form>   
         </div>
       </div>
     </div>
@@ -53,7 +84,6 @@ $url = htmlspecialchars(get_config('url'));
       <div id="form">
         <form action="results2.php" method="get">
           <div class="formLayout">
-            <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
             <?php if (!empty($errors)) { ?>
             <h2><div class="error">Complétez tous champs afin de valider votre annonce</div></h2>
             <?php } ?>

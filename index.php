@@ -23,9 +23,9 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $childFirstname = $result['value'];
     $errors['childFirstname'] = $result['error'];
     
-    $result = validateMandatory('telephone');
-    $telephone = $result['value'];
-    $errors['telephone'] = $result['error'];
+    //$result = validateMandatory('telephone');
+    //$telephone = $result['value'];
+    //$errors['telephone'] = $result['error'];
 
     $result = validateMandatory('email');
     $email = $result['value'];
@@ -85,7 +85,10 @@ $url = htmlspecialchars(get_config('url'));
             السلام عليكم 
             <br/>
             Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
-            <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2>
+            <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2><br>
+            ou accéder directement aux annonces:<br>
+            <a href="results2.php"><input type="button" name="carte" value="Annonces" id="ss-submit-map" class="jfk-button jfk-button-action" ></a>
+            <a href="results.php"><input type="button" name="carte" value="Carte" id="ss-submit-map" class="jfk-button jfk-button-action" ></a>
         </div>
       </div>
     </div>
@@ -99,7 +102,6 @@ $url = htmlspecialchars(get_config('url'));
             <h2><div class="error">Complétez tous champs afin de valider votre annonce</div></h2>
             <?php } ?>
             <br>
-            <h3><a href="results2.php">Accéder directement aux résultats</a></h3>
             <br>
             <label  class="my myForm" for="name">Vos nom et prénoms</label>
             <input id="name" name="name" class="<?php echo $errors['name'] ?>" value="<?php echo $name ?>" placeholder="Obligatoire" />
@@ -116,7 +118,7 @@ $url = htmlspecialchars(get_config('url'));
 
             <label  class="my myForm" for="telephone">N° téléphone</label>
             <input id="telephone" name="telephone" class="<?php echo $errors['telephone'] ?>" 
-                    value="<?php echo $telephone ?>" placeholder="Obligatoire" />
+                    value="<?php echo $telephone ?>" />
             <br>
             <label  class="my myForm" for="childFirstname">Noms et prénoms des enfants</label>
             <input id="childFirstname" name="childFirstname" class="<?php echo $errors['childFirstname'] ?>" 

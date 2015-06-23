@@ -10,7 +10,6 @@ $services = "";
 if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $services = $_POST['services'];
 }
-
 ?>
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -120,24 +119,8 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
               <div class="mycell vac-icon"><label for="route_0" class="vac"  title="Vacances"></label></div>
               <div class="mycell can-icon"><label for="route_0" class="can"  title="Cantine	"></label></div>
             </div>
-            <?php 
-            $collection = get_collection(ROUTES_COLLECTION);
-            $submitted_cities = $_POST['cities'];
-            $empty = empty($submitted_cities);
-            $posted = ( isset($submitted_cities) && !$empty );
-            $cities_array = implode("','", $cities);
-            $cursor = "";
-            if( $posted ) {
-            // $query = array ( '$or' => array ( 'cityHome' =>  array (  '$in' =>  $cities,  ), ) ;
-             $query = array ( '$or' => array ( 0 => array ( 'cityWork'  => array ( '$in' => $cities, ),  ),
-                                               1 => array ( 'cityHome'  => array ( '$in' => $cities, ),  ),
-                                               2 => array ( 'cityOther' => array ( '$in' => $cities, ),  ),
-                                             ),
-                            ); 
-             $cursor = $collection->find($query);
-            } else {
-             $cursor = $collection->find();
-            }
+            <?php
+            $cursor = get_routes($cities);
             $i = 1;
             $c = true;
             foreach ( $cursor as $id => $value ) {

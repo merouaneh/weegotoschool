@@ -40,6 +40,13 @@ function get_user($username, $password) {
     return $object['username'];
 }
 
+function update_password($username, $password) {
+    $collection = get_collection(USERS_COLLECTION);
+    $object = $collection->update( array('username' =>  $username ), array('$set' => array( "password" => $password)));
+    return $object['username'];
+}
+
+
 function get_route($id) {
     $collection = get_collection(ROUTES_COLLECTION);
     $object = $collection->findOne(array('_id' =>  new MongoId($id) ));

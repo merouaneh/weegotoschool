@@ -84,7 +84,15 @@ $url = htmlspecialchars(get_config('url'));
         <div id="intro">
             السلام عليكم 
             <br/>
-            Besoin d'aide pour emmener ou récupérer vos enfants à l'école ? Personne pour s'en occuper le mercredi ou pendant les vacances scolaires? Vous avez besoin d'un coup de main pour le repas de midi quelques jours par semaine? Vous avez peut-être besoin d'aide pour les devoirs? D'autres parents sont certainement dans le même cas que vous! Pourquoi ne pas s'entraider entre parents de l'école? Ce formulaire à pour but de vous aider à vous mettre en relation des parents proches de votre lieu de résidence ou de travail, et vous aider à trouver des solutions pour le myapp, la garde, la cantine et les devoirs de vos enfants.
+            Besoin d'aide pour le covoiturage, la garde, la cantine et les devoirs de vos enfants? D'autres parents sont 
+            certainement dans le même cas que vous!
+            <br>
+            <br>
+            Parents, assistantes maternelles, étudiants, toutes personnes de confiance venez proposer votre aide!
+            <br>
+            <br>
+            Ce formulaire va vous aider à vous mettre en relation des personnes proches de votre lieu de résidence ou de travail, et à trouver des solutions.
+            <br>
             <h2>Remplir le formulaire et accéder aux annonces des parents près de chez vous</h2><br>
             ou accéder directement aux annonces:<br>
             <a href="results2.php"><input type="button" name="carte" value="Annonces" id="ss-submit-map" class="jfk-button jfk-button-action" ></a>

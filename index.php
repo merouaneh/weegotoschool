@@ -19,9 +19,9 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $result['value']; 
     $errors['name'] = $result['error'];
     
-    $result = validateMandatory('childFirstname'); 
-    $childFirstname = $result['value'];
-    $errors['childFirstname'] = $result['error'];
+//    $result = validateMandatory('childFirstname'); 
+//    $childFirstname = $result['value'];
+//    $errors['childFirstname'] = $result['error'];
     
     //$result = validateMandatory('telephone');
     //$telephone = $result['value'];
@@ -47,9 +47,9 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST") {
     $classified = $result['value'];
     $errors['classified'] = $result['error'];
 
-    $result = validateMandatory('childrenGrades');
-    $childrenGrades = $result['value'];
-    $errors['childrenGrades'] = $result['error'];
+//    $result = validateMandatory('childrenGrades');
+//    $childrenGrades = $result['value'];
+//    $errors['childrenGrades'] = $result['error'];
 
     $errors = array_filter($errors);
     if (empty($errors)) {
@@ -130,11 +130,11 @@ $url = htmlspecialchars(get_config('url'));
             <br>
             <label  class="my myForm" for="childFirstname">Noms et prénoms des enfants</label>
             <input id="childFirstname" name="childFirstname" class="<?php echo $errors['childFirstname'] ?>" 
-                   value="<?php echo $childFirstname ?>" placeholder="Obligatoire" />
+                   value="<?php echo $childFirstname ?>" />
 
             <label  class="my myForm" for="childrenNumber">Nombre d'enfants</label>
             <select id="childrenNumber" name="childrenNumber">
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+                <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
             </select>
             <br>
             <label for="childrenGrades">Classes des enfants</label>

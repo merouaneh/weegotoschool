@@ -1,0 +1,135 @@
+
+.mytable {
+  display: table;
+  table-layout: fixed; 
+}
+
+.myrow {
+  display: table-row;
+}
+
+.odd { background-color: WhiteSmoke;}
+.even { /*display: table-row; */}
+
+.mycell {
+  display: table-cell;
+  color: black;
+  text-align: left;
+  word-wrap: break-word;   
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+ /* border: 1px solid black; */
+ max-width: 300px;
+}
+
+.column1 {
+  display: table-column;
+}
+.column2 {
+  display: table-column;
+  width: 120px;
+}
+
+.column3 {
+  display: table-column;
+  width: 200px;
+}
+
+.column4 {
+  display: table-column;
+  table-layout: fixed;
+  width: 300px;
+  word-wrap: break-word;   
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  -ms-word-break: break-all;
+}
+
+.activity {
+  background-repeat: no-repeat;
+  color: transparent; 
+
+}
+
+.cov-ask-give , .gar-ask-give , .dev-ask-give, .can-ask-give, .vac-ask-give {
+  background-image: url(../images/ask.png), url(../images/give.png);
+  background-size: 16px, 16px;
+  background-position: right bottom 1px, right bottom 6px;
+}
+
+
+.cov-ask, .gar-ask , .dev-ask, .can-ask, .vac-ask{
+   background-image: url(../images/ask.png);
+  background-size:  16px;
+  background-position: right bottom 1px;
+
+
+}
+
+.cov-give , .gar-give, .dev-give, .can-give, .vac-give {
+  background-image: url(../images/give.png);
+  background-size: 16px;
+  background-position: right bottom 6px;
+}
+
+
+
+.gar-icon {
+  background-image: url(../images/802.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.can-icon {
+  background-image: url(../images/493.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.cov-icon {
+  background-image: url(../images/1294.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.dev-icon {
+  background-image: url(../images/1018.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.vac-icon {
+  background-image: url(../images/432.png);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.giv-icon {
+  background-image: url(../images/give.png);
+  background-size: 16px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.ask-icon {
+  background-image: url(../images/ask.png);
+  background-size: 16px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+

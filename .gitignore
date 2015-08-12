@@ -2,3 +2,8 @@ index.html
 form.html
 results.html
 
+target
+.settings/*
+!.settings/.jsdtscope
+.project
+.classpath
